@@ -1,0 +1,139 @@
+.bg-navbar {
+  position: fixed;
+  width: 104px;
+  min-height: 100vh;
+  left: 0px;
+  top: 0px;
+  background: #1f1d2b;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+.menu-navbar {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+}
+
+.brand-icon-wrapper {
+  width: 94px;
+  height: 75px;
+  margin: 20px 10px 10px 10px;
+  border-radius: 12px 0px 0px 12px;
+  position: relative;
+  cursor: default;
+}
+
+.brand-icon {
+  color: #ffca40;
+  font-size: 35px;
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  gap: 10px;
+
+  width: 56px;
+  height: 56px;
+  margin-top: 9px;
+  margin-left: 10px;
+
+  background: rgb(129, 86, 7);
+  box-shadow: 0px 8px 24px rgba(255, 202, 64, 0.32);
+  border-radius: 8px;
+}
+
+.logo-icon:hover {
+  color: none;
+}
+
+.icon-navbar-wrapper {
+  width: 94px;
+  height: 75px;
+  margin: 20px 10px 10px 10px;
+  border-radius: 12px 0px 0px 12px;
+  position: relative;
+}
+
+.icon-navbar-wrapper:focus {
+  background: #252836;
+}
+
+.icon-navbar-wrapper:focus + .icon-navbar-wrapper::after {
+  background-image: url("../../public/images/Content/Rectangle\ 25.png");
+  content: "";
+  position: absolute;
+  top: -31px;
+  left: 82px;
+  width: 12.02px;
+  height: 12px;
+}
+
+.icon-navbar-wrapper:focus + .icon-navbar-wrapper::before {
+  background-image: url("../../public/images/Content/Rectangle\ 25.png");
+  content: "";
+  position: absolute;
+  top: -116px;
+  left: 83px;
+  width: 12.02px;
+  height: 12px;
+  transform: rotate(90deg);
+}
+
+.icon-navbar {
+  color: #ffca40;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  gap: 10px;
+
+  width: 56px;
+  height: 56px;
+  margin-top: 9px;
+  margin-left: 10px;
+
+  background: transparent;
+  box-shadow: none;
+  border-radius: 8px;
+  transition: all 0.5s;
+}
+
+.icon-navbar-wrapper:focus > .icon-navbar {
+  color: white;
+  background: #ffca40;
+  box-shadow: 0px 8px 24px rgba(255, 202, 64, 0.32);
+  border-radius: 8px;
+}
+
+.icon-navbar:hover {
+  color: white;
+}
+
+.icon-logout-wrapper {
+  width: 94px;
+  height: 75px;
+  margin: 20px 10px 10px 10px;
+  border-radius: 12px 0px 0px 12px;
+  position: relative;
+  background: transparent;
+  border: none;
+  margin-top: 180px;
+}
+
+.icon-logout {
+  color: #ffca40;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  gap: 10px;
+
+  width: 56px;
+  height: 56px;
+  margin-left: 5px;
+
+  background: transparent;
+  box-shadow: none;
+  border-radius: 8px;
+}

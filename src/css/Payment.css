@@ -1,0 +1,386 @@
+.bg-payment {
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  min-height: 100vh;
+  width: 100%;
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.bg-payment-active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.content-payment-wrapper {
+  background: #1f1d2b;
+  border-radius: 16px 16px 0px 16px;
+  position: absolute;
+  width: 60%;
+  right: -100%;
+  min-height: 100vh;
+  transition: all 0.5s;
+}
+
+.payment-active {
+  position: absolute;
+  right: 0;
+}
+
+.confirmation-area {
+  position: absolute;
+  width: 49%;
+  left: 0;
+  min-height: 100vh;
+  padding: 20px;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.confirmation-area::-webkit-scrollbar {
+  display: none;
+}
+
+.btn-back {
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+.top-confirm-area {
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-confirm h1 {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 140%;
+  color: #ffffff;
+}
+
+.text-confirm h2 {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  color: #abbbc2;
+}
+
+.btn-add {
+  display: flex;
+  align-self: center;
+  color: white;
+  padding: 10px 10px 10px 10px;
+  background: #ffca40;
+  border-radius: 8px;
+  font-size: 25px;
+}
+
+.divider-top-confirm {
+  content: "";
+  display: flex;
+  margin: auto;
+  width: 100%;
+  position: relative;
+  background-color: #393c49;
+  border: 1px solid #393c49;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.divider-top-payment {
+  content: "";
+  display: flex;
+  margin: auto;
+  width: 100%;
+  position: relative;
+  background-color: #393c49;
+  border: 1.1px solid #393c49;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.payment-total-area {
+  position: fixed;
+  bottom: 0;
+  width: 28%;
+  height: 160px;
+  z-index: 2;
+  background: #1f1d2b;
+  padding: 0 30px 0 30px;
+}
+
+.product-confirm-wrapper {
+  padding-bottom: 55px;
+}
+
+.divider-payment {
+  content: "";
+  width: 1px;
+  min-height: 100vh;
+  border: 1px solid #393c49;
+  background: #393c49;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+}
+
+.payment-area {
+  position: absolute;
+  width: 49%;
+  right: 0;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.text-payment {
+  margin-top: 50px;
+  margin-bottom: 25px;
+}
+
+.text-payment h1 {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 140%;
+  color: #ffffff;
+}
+
+.text-payment h2 {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  color: #abbbc2;
+}
+
+.credit-card-area h1 {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 140%;
+  color: #ffffff;
+}
+
+.payment-method {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+
+.credit-card-wrapper {
+  margin-right: 20px;
+  border: 1px solid #393c49;
+  border-radius: 8px;
+  align-self: center;
+  padding: 10px 10px 10px 10px;
+  width: 23%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.credit-card-wrapper:hover {
+  border: 1px solid white;
+}
+.credit-card-wrapper:hover .payment-icon {
+  color: white;
+}
+.credit-card-wrapper:hover .text-payment-method {
+  color: white;
+}
+
+.credit-card-active {
+  border: 1px solid white;
+}
+
+.payment-icon {
+  color: #abbbc2;
+}
+
+.payment-icon-active {
+  color: white;
+}
+
+.check-icon {
+  color: #ffca40;
+  position: absolute;
+  top: 0;
+  right: 5px;
+  font-size: 14px;
+}
+
+.text-payment-method {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 130%;
+  color: #abbbc2;
+  margin-top: 2px;
+}
+
+.text-payment-method-active {
+  color: white;
+}
+
+.label-payment {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 130%;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+
+.input-payment {
+  width: 100%;
+  margin-bottom: 10px;
+  background: #2d303e;
+  border: 1px solid #393c49;
+  border-radius: 8px;
+  padding: 7px;
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: #e0e6e9;
+}
+
+.input-payment-cvv {
+  width: 100%;
+  margin-bottom: 20px;
+  background: #2d303e;
+  border: 1px solid #393c49;
+  border-radius: 8px;
+  padding: 7px;
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: #e0e6e9;
+}
+
+.label-payment-order {
+  width: 100%;
+  margin-bottom: 20px;
+  background: #2d303e;
+  border: 1px solid #393c49;
+  border-radius: 8px;
+  padding: 7px;
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: #e0e6e9;
+}
+
+.input-payment-cvv::placeholder {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 140%;
+  color: #e0e6e9;
+}
+
+.input-payment::placeholder {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: #e0e6e9;
+}
+
+.btn-payment-confirm {
+  width: 100%;
+  padding: 10px 5px 10px 5px;
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 140%;
+  color: #ffca40;
+  border-radius: 10px;
+  border: 1px solid #ffca40;
+  background: transparent;
+  margin-top: 50px;
+  transition: all 0.5s;
+}
+
+.btn-payment-confirm:hover {
+  background: #ffca40;
+  color: white;
+}
+
+.btn-dropdown-food {
+  background: #1f1d2b;
+  border: 1px solid #393c49;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.btn-dropdown-food h4 {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #e0e6e9;
+  margin-left: 10px;
+  margin-top: 8px;
+}
+
+.btn-dropdown-food span {
+  color: white;
+  font-size: 25px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+
+.dropdown-area {
+  position: absolute;
+  width: 100%;
+  top: 40px;
+  z-index: 1;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: 1px solid #393c49;
+  background: #1f1d2b;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.dropdown-area-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown-area option {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #e0e6e9;
+}
