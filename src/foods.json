@@ -82,5 +82,89 @@
     "price": "Rp. 45.000",
     "stock": 17,
     "type": "hot"
+  },
+  {
+    "image": "cold_1.jpg",
+    "food_name": "Ice Cream Vanilla with sugar balmon",
+    "price": "Rp. 43.000",
+    "stock": 20,
+    "type": "cold"
+  },
+  {
+    "image": "cold_2.jpg",
+    "food_name": "Vanilla Cream with colorful ice",
+    "price": "Rp. 35.000",
+    "stock": 11,
+    "type": "cold"
+  },
+  {
+    "image": "cold_3.jpg",
+    "food_name": "Ice Dream Coffee",
+    "price": "Rp. 65.000",
+    "stock": 16,
+    "type": "cold"
+  },
+  {
+    "image": "cold_4.jpg",
+    "food_name": "Ice Cream Vanilla with sugar balmon",
+    "price": "Rp. 65.000",
+    "stock": 22,
+    "type": "cold"
+  },
+  {
+    "image": "cold_5.jpg",
+    "food_name": "Angsle",
+    "price": "Rp. 57.000",
+    "stock": 13,
+    "type": "cold"
+  },
+  {
+    "image": "cold_6.jpg",
+    "food_name": "Daluman",
+    "price": "Rp. 45.000",
+    "stock": 17,
+    "type": "cold"
+  },
+  {
+    "image": "hot_1.jpg",
+    "food_name": "Spicy seasoned seafood noodles",
+    "price": "Rp. 43.000",
+    "stock": 20,
+    "type": "hot"
+  },
+  {
+    "image": "hot_2.png",
+    "food_name": "Salted Pasta with mushroom sauce",
+    "price": "Rp. 35.000",
+    "stock": 11,
+    "type": "hot"
+  },
+  {
+    "image": "hot_3.png",
+    "food_name": "Beef dumpling in hot and sour soup",
+    "price": "Rp. 65.000",
+    "stock": 16,
+    "type": "hot"
+  },
+  {
+    "image": "hot_4.png",
+    "food_name": "Healthy noodle with spinach leaf",
+    "price": "Rp. 65.000",
+    "stock": 22,
+    "type": "hot"
+  },
+  {
+    "image": "hot_5.png",
+    "food_name": "Hot spicy fried rice with omelet",
+    "price": "Rp. 57.000",
+    "stock": 13,
+    "type": "hot"
+  },
+  {
+    "image": "hot_6.jpg",
+    "food_name": "Spicy instant noodle with special omelette",
+    "price": "Rp. 45.000",
+    "stock": 17,
+    "type": "hot"
   }
 ]

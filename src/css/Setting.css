@@ -3,6 +3,198 @@
   background: #252836;
 }
 
-.container p {
-  color: aliceblue;
+.title-setting {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 140%;
+  color: #ffffff;
+  padding: 15px;
+  position: absolute;
+  left: 120px;
+}
+
+.setting-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.setting-wrapper {
+  background: #1f1d2b;
+  position: fixed;
+  left: 120px;
+  top: 70px;
+  height: 630px;
+  border-radius: 10px;
+  width: 90%;
+  overflow-y: scroll;
+}
+
+.top-content-setting {
+  background: #1f1d2b;
+  position: fixed;
+  top: 70px;
+  left: 120px;
+  width: 90%;
+  z-index: 1;
+  border-radius: 10px;
+  padding: 35px 35px 0 35px;
+}
+
+.content-setting {
+  padding: 150px 20px 0 20px;
+}
+
+.top-title-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.top-title-wrapper h1 {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 140%;
+  color: #ffffff;
+}
+
+.btn-setting {
+  border-radius: 10px;
+  border: #252836 solid 2px;
+  background: transparent;
+  width: 19%;
+  padding: 10px 5px;
+}
+
+.top-title-wrapper .setting-icon {
+  font-size: 20px;
+  color: white;
+  margin-right: 5px;
+}
+
+.top-title-wrapper .text-manage {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  color: #ffffff;
+}
+
+.box-product-area {
+  padding: 30px 90px 0 20px;
+}
+
+.food-wrapper {
+  width: 100%;
+  border: #252836 solid 2px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  position: relative;
+  border-radius: 0px 0px 8px 8px;
+  margin: auto;
+}
+
+.food-wrapper img {
+  width: 50%;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+
+.food-wrapper h1 {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  width: 50%;
+  margin-top: 10px;
+  line-height: 130%;
+  text-align: center;
+  color: #ffffff;
+  padding: 10px 0 10px 0;
+}
+
+.food-wrapper span {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: #abbbc2;
+  margin-right: 10px;
+  padding-bottom: 80px;
+}
+
+.stock-product {
+  display: flex;
+  justify-content: center;
+}
+
+.add-wrapper {
+  border-radius: 0px 0px 8px 8px;
+  padding: 12px 12px 12px 12px;
+  cursor: pointer;
+  color: #ffca40;
+  border: 1px dashed #ffca40;
+  border-radius: 8px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.add-wrapper h1 {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  text-align: center;
+  color: #ffca40;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.add-icon {
+  font-size: 20px;
+  color: #ffca40;
+  margin-top: 115px;
+  margin-bottom: 20px;
+}
+
+.edit-box {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background: #6c5b2f;
+  border-radius: 0px 0px 8px 8px;
+  padding: 12px 12px 12px 12px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.edit-box span {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 140%;
+  color: #ffca40;
+}
+
+.divider-setting-bottom {
+  content: "";
+  background: #1f1d2b;
+  width: 90%;
+  height: 50px;
+  position: fixed;
+  bottom: 0;
+  left: 120px;
+  border-top: 1px solid #252836;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }

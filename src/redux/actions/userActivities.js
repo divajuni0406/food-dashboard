@@ -6,6 +6,8 @@ const userActivities = createSlice({
     isUserLoggedIn: false,
     isPayment: false,
     isPaymentConfirm: false,
+    isCreateSuccess: false,
+    isModalOpen: false,
   },
   reducers: {
     login: (state, action) => {
@@ -17,8 +19,15 @@ const userActivities = createSlice({
     paymentConfirm: (state, action) => {
       state.isPaymentConfirm = action.payload;
     },
+    createSuccess: (state, action) => {
+      state.isCreateSuccess = action.payload;
+    },
+    modalOpen: (state, action) => {
+      state.isModalOpen = action.payload;
+    },
   },
 });
 
-export const { login, payment, paymentConfirm } = userActivities.actions;
+export const { login, payment, paymentConfirm, createSuccess, modalOpen } =
+  userActivities.actions;
 export default userActivities.reducer;

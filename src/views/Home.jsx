@@ -30,13 +30,17 @@ const Home = () => {
   useEffect(() => {
     let hot = document.querySelector("#hot");
     let cold = document.querySelector("#cold");
+    let boxMenuHot = document.querySelector("#box-menu-hot");
+    let boxMenuCold = document.querySelector("#box-menu-cold");
 
     if (dishType === "hot") {
       hot.classList.add("nav-food-active");
       cold.classList.remove("nav-food-active");
+      boxMenuHot.classList.add("box-menu-active");
     } else if (dishType === "cold") {
       hot.classList.remove("nav-food-active");
       cold.classList.add("nav-food-active");
+      boxMenuCold.classList.add("box-menu-active");
     } else {
       hot.classList.remove("nav-food-active");
       cold.classList.remove("nav-food-active");
@@ -141,15 +145,17 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div>
-              <div className="row mt-5">
+            <div className="">
+              <div className="row mt-5 general-product">
                 {dishType === "hot" || dishType === "cold" ? (
                   _.filter(foods, { type: dishType }).map((food, index) => (
-                    <div className="col-md-3 ms-5 box-menu" key={index}>
-                      <img src={`/images/Content/${food.image}`} alt="" />
-                      <h1>{food.food_name}</h1>
-                      <h2>{food.price}</h2>
-                      <h3>{`${food.stock} Bowls Available`}</h3>
+                    <div className="col-md-4" key={index}>
+                      <div className="box-menu" id={`box-menu-${dishType}`}>
+                        <img src={`/images/Content/${food.image}`} alt="" />
+                        <h1>{food.food_name}</h1>
+                        <h2>{food.price}</h2>
+                        <h3>{`${food.stock} Bowls Available`}</h3>
+                      </div>
                     </div>
                   ))
                 ) : (

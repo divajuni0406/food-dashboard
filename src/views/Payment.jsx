@@ -11,7 +11,7 @@ import {
   BsCashCoin,
 } from "react-icons/bs";
 import { RiPaypalLine } from "react-icons/ri";
-import OrderSuccess from "./OrderSuccess";
+import OrderSuccess from "./OrderSuccessNotif";
 import { paymentConfirm } from "../redux/actions/userActivities";
 
 const Payment = () => {

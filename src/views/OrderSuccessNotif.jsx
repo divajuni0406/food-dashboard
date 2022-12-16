@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "../css/OrderSuccess.css";
+import "../css/OrderSuccessNotif.css";
 import { paymentConfirm } from "../redux/actions/userActivities";
 import { useDispatch, useSelector } from "react-redux";
 

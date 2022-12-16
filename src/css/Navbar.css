@@ -2,11 +2,12 @@
   position: fixed;
   width: 104px;
   min-height: 100vh;
-  left: 0px;
-  top: 0px;
+  left: 0;
+  top: 0;
   background: #1f1d2b;
   border-top-right-radius: 16px;
   border-bottom-right-radius: 16px;
+  z-index: 1;
 }
 
 .menu-navbar {
