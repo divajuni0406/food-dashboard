@@ -15,6 +15,7 @@
   flex-direction: column;
   text-align: center;
   position: relative;
+  min-height: 100vh;
 }
 
 .brand-icon-wrapper {
@@ -116,10 +117,10 @@
   height: 75px;
   margin: 20px 10px 10px 10px;
   border-radius: 12px 0px 0px 12px;
-  position: relative;
   background: transparent;
   border: none;
-  margin-top: 180px;
+  position: absolute;
+  bottom: 0;
 }
 
 .icon-logout {
@@ -129,11 +130,9 @@
   align-items: center;
   padding: 16px;
   gap: 10px;
-
   width: 56px;
   height: 56px;
   margin-left: 5px;
-
   background: transparent;
   box-shadow: none;
   border-radius: 8px;

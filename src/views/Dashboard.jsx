@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../css/Dashboard.css";
 import {
   AiOutlineDollarCircle,
@@ -8,8 +8,12 @@ import {
 import { BsPeople } from "react-icons/bs";
 import { BiBookmarkMinus } from "react-icons/bi";
 import { GoSettings } from "react-icons/go";
+import { RiArrowDropUpLine, RiArrowDropDownLine } from "react-icons/ri";
 
 const Dashboard = () => {
+  const [whereToEatDrop, setWhereToEatDrop] = useState("Dine In");
+  const [toggleDropdown, setToggleDropdown] = useState(false);
+
   return (
     <div className="bg-dashboard">
       <div className="container">
@@ -89,7 +93,11 @@ const Dashboard = () => {
                   <tbody>
                     <tr>
                       <td>
-                        <img src="/images/avatar/avatar-1.png" alt="" />{" "}
+                        <img
+                          src="/images/avatar/avatar-1.png"
+                          className="avatar"
+                          alt=""
+                        />{" "}
                         <span>Sofian Hadi</span>
                       </td>
                       <td>
@@ -104,7 +112,11 @@ const Dashboard = () => {
                     </tr>
                     <tr>
                       <td>
-                        <img src="/images/avatar/avatar-1.png" alt="" />{" "}
+                        <img
+                          src="/images/avatar/avatar-1.png"
+                          className="avatar"
+                          alt=""
+                        />{" "}
                         <span>Sofian Hadi</span>
                       </td>
                       <td>
@@ -119,7 +131,11 @@ const Dashboard = () => {
                     </tr>
                     <tr>
                       <td>
-                        <img src="/images/avatar/avatar-1.png" alt="" />{" "}
+                        <img
+                          src="/images/avatar/avatar-1.png"
+                          className="avatar"
+                          alt=""
+                        />{" "}
                         <span>Sofian Hadi</span>
                       </td>
                       <td>
@@ -134,7 +150,30 @@ const Dashboard = () => {
                     </tr>
                     <tr>
                       <td>
-                        <img src="/images/avatar/avatar-1.png" alt="" />{" "}
+                        <img
+                          src="/images/avatar/avatar-1.png"
+                          className="avatar"
+                          alt=""
+                        />{" "}
+                        <span>Sofian Hadi</span>
+                      </td>
+                      <td>
+                        <span>Spicy seasoned seafood noodles</span>
+                      </td>
+                      <td>
+                        <span>Rp. 43.000</span>
+                      </td>
+                      <td>
+                        <p className="status-table pending">Pending</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <img
+                          src="/images/avatar/avatar-1.png"
+                          className="avatar"
+                          alt=""
+                        />{" "}
                         <span>Sofian Hadi</span>
                       </td>
                       <td>
@@ -145,115 +184,224 @@ const Dashboard = () => {
                       </td>
                       <td>
                         <p className="status-table completed">Completed</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <img
+                          src="/images/avatar/avatar-1.png"
+                          className="avatar"
+                          alt=""
+                        />{" "}
+                        <span>Sofian Hadi</span>
+                      </td>
+                      <td>
+                        <span>Spicy seasoned seafood noodles</span>
+                      </td>
+                      <td>
+                        <span>Rp. 43.000</span>
+                      </td>
+                      <td>
+                        <p className="status-table pending">Pending</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <img
+                          src="/images/avatar/avatar-1.png"
+                          className="avatar"
+                          alt=""
+                        />{" "}
+                        <span>Sofian Hadi</span>
+                      </td>
+                      <td>
+                        <span>Spicy seasoned seafood noodles</span>
+                      </td>
+                      <td>
+                        <span>Rp. 43.000</span>
+                      </td>
+                      <td>
+                        <p className="status-table completed">Completed</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <img
+                          src="/images/avatar/avatar-1.png"
+                          className="avatar"
+                          alt=""
+                        />{" "}
+                        <span>Sofian Hadi</span>
+                      </td>
+                      <td>
+                        <span>Spicy seasoned seafood noodles</span>
+                      </td>
+                      <td>
+                        <span>Rp. 43.000</span>
+                      </td>
+                      <td>
+                        <p className="status-table pending">Pending</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <img
+                          src="/images/avatar/avatar-1.png"
+                          className="avatar"
+                          alt=""
+                        />{" "}
+                        <span>Sofian Hadi</span>
+                      </td>
+                      <td>
+                        <span>Spicy seasoned seafood noodles</span>
+                      </td>
+                      <td>
+                        <span>Rp. 43.000</span>
+                      </td>
+                      <td>
+                        <p className="status-table completed">Completed</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <img
+                          src="/images/avatar/avatar-1.png"
+                          className="avatar"
+                          alt=""
+                        />{" "}
+                        <span>Sofian Hadi</span>
+                      </td>
+                      <td>
+                        <span>Spicy seasoned seafood noodles</span>
+                      </td>
+                      <td>
+                        <span>Rp. 43.000</span>
+                      </td>
+                      <td>
+                        <p className="status-table completed">Completed</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <img
+                          src="/images/avatar/avatar-1.png"
+                          className="avatar"
+                          alt=""
+                        />{" "}
+                        <span>Sofian Hadi</span>
+                      </td>
+                      <td>
+                        <span>Spicy seasoned seafood noodles</span>
+                      </td>
+                      <td>
+                        <span>Rp. 43.000</span>
+                      </td>
+                      <td>
+                        <p className="status-table pending">Pending</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <img
+                          src="/images/avatar/avatar-1.png"
+                          className="avatar"
+                          alt=""
+                        />{" "}
+                        <span>Sofian Hadi</span>
+                      </td>
+                      <td>
+                        <span>Spicy seasoned seafood noodles</span>
+                      </td>
+                      <td>
+                        <span>Rp. 43.000</span>
+                      </td>
+                      <td>
+                        <p className="status-table pending">Pending</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <img
+                          src="/images/avatar/avatar-1.png"
+                          className="avatar"
+                          alt=""
+                        />{" "}
+                        <span>Sofian Hadi</span>
+                      </td>
+                      <td>
+                        <span>Spicy seasoned seafood noodles</span>
+                      </td>
+                      <td>
+                        <span>Rp. 43.000</span>
+                      </td>
+                      <td>
+                        <p className="status-table pending">Pending</p>
                       </td>
                     </tr>
                   </tbody>
-                  {/* <tr>
-                    <th className="col-4">
-                      <div className="customer-table">
-                        <img src="/images/avatar/avatar-1.png" alt="" />
-                        <p>Sofian Hadi</p>
-                      </div>
-                    </th>
-                    <td className="col-2">
-                      <p className="text-table">
-                        Spicy seasoned seafood noodles
-                      </p>
-                    </td>
-                    <td className="col-3 text-center">
-                      <p className="text-table">Rp. 43.000</p>
-                    </td>
-                    <td className=" col-2">
-                      <p className="status-table completed">Completed</p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th className="col-4">
-                      <div className="customer-table">
-                        <img src="/images/avatar/avatar-1.png" alt="" />
-                        <p>Sofian Hadi</p>
-                      </div>
-                    </th>
-                    <td className="col-2">
-                      <p className="text-table">
-                        Spicy seasoned seafood noodles
-                      </p>
-                    </td>
-                    <td className="col-3 text-center">
-                      <p className="text-table">Rp. 43.000</p>
-                    </td>
-                    <td className=" col-2">
-                      <p className="status-table completed">Completed</p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th className="col-4">
-                      <div className="customer-table">
-                        <img src="/images/avatar/avatar-1.png" alt="" />
-                        <p>Sofian Hadi</p>
-                      </div>
-                    </th>
-                    <td className="col-2">
-                      <p className="text-table">
-                        Spicy seasoned seafood noodles
-                      </p>
-                    </td>
-                    <td className="col-3 text-center">
-                      <p className="text-table">Rp. 43.000</p>
-                    </td>
-                    <td className=" col-2">
-                      <p className="status-table completed">Completed</p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th className="col-4">
-                      <div className="customer-table">
-                        <img src="/images/avatar/avatar-1.png" alt="" />
-                        <p>Sofian Hadi</p>
-                      </div>
-                    </th>
-                    <td className="col-2">
-                      <p className="text-table">
-                        Spicy seasoned seafood noodles
-                      </p>
-                    </td>
-                    <td className="col-3 text-center">
-                      <p className="text-table">Rp. 43.000</p>
-                    </td>
-                    <td className=" col-2">
-                      <p className="status-table completed">Completed</p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th className="col-4">
-                      <div className="customer-table">
-                        <img src="/images/avatar/avatar-1.png" alt="" />
-                        <p>Sofian Hadi</p>
-                      </div>
-                    </th>
-                    <td className="col-2">
-                      <p className="text-table">
-                        Spicy seasoned seafood noodles
-                      </p>
-                    </td>
-                    <td className="col-3 text-center">
-                      <p className="text-table">Rp. 43.000</p>
-                    </td>
-                    <td className=" col-2">
-                      <p className="status-table completed">Completed</p>
-                    </td>
-                  </tr> */}
                 </table>
               </div>
-              {/* <div className="tableHead-wrapper">
-                <span className="customer">Customer</span>
-                <span className="menu">Menu</span>
-                <span className="total">Total Payment</span>
-                <span className="status">Status</span>
-                <div className="divider-table"></div>
-              </div> */}
             </div>
             <div className="order-fix"></div>
+          </div>
+          <div className="most-ordered-wrapper">
+            <div className="top-most-order">
+              <h1>Most Order</h1>
+              <div className="choose-dish-area">
+                <div
+                  className="btn-dropdown-eat"
+                  onClick={() => setToggleDropdown(!toggleDropdown)}
+                >
+                  <span>
+                    {toggleDropdown ? (
+                      <RiArrowDropUpLine />
+                    ) : (
+                      <RiArrowDropDownLine />
+                    )}
+                  </span>
+                  <h4>{whereToEatDrop}</h4>
+                  <div
+                    className={`dropdown-eat-area ${
+                      toggleDropdown ? "dropdown-eat-area-active" : ""
+                    }`}
+                  >
+                    <option
+                      value="Today"
+                      onClick={(e) => setWhereToEatDrop(e.target.value)}
+                    >
+                      Today
+                    </option>
+                    <option
+                      value="Tomorrow"
+                      onClick={(e) => setWhereToEatDrop(e.target.value)}
+                    >
+                      Tomorrow
+                    </option>
+                    <option
+                      value="Others"
+                      onClick={(e) => setWhereToEatDrop(e.target.value)}
+                    >
+                      Others
+                    </option>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="most-food-wrapper">
+              <div className="row">
+                <div className="col-md-3">
+                  <div className="most-food-img">
+                    <img src="/images/content/cold_5.jpg" alt="" />
+                  </div>
+                </div>
+                <div className="col-md-9">
+                  <div className="most-food-description">
+                    <h1>hahahaha</h1>
+                    <span>hahahha</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

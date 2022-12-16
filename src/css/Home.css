@@ -209,6 +209,7 @@
   opacity: 0;
   visibility: visible;
   transition: all 0.5s;
+  padding: 8px;
 }
 
 .dropdown-eat-area-active {
@@ -232,9 +233,9 @@
   padding: 10px;
   text-align: center;
   position: relative;
-  height: 300px;
+  height: calc(100% - 60px);
   margin-bottom: 70px;
-  width: 95%;
+  width: 90%;
 }
 
 .box-menu.box-menu-active {
@@ -245,8 +246,8 @@
   border-radius: 50%;
   position: relative;
   top: -45px;
-  left: 20px;
-  width: 80%;
+  left: 60px;
+  width: 60%;
 }
 
 .box-menu h1 {
@@ -397,7 +398,8 @@
   border: 1px solid #393c49;
   border-radius: 8px;
   display: flex;
-  padding: 15px 0;
+  padding: 10px 10px 10px 10px;
+  width: 70%;
   align-items: center;
   justify-content: center;
   font-family: "Barlow";

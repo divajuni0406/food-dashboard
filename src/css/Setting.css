@@ -24,7 +24,7 @@
   position: fixed;
   left: 120px;
   top: 70px;
-  height: 630px;
+  height: calc(100% - 70px);
   border-radius: 10px;
   width: 90%;
   overflow-y: scroll;
@@ -95,7 +95,7 @@
   text-align: center;
   align-items: center;
   position: relative;
-  border-radius: 0px 0px 8px 8px;
+  border-radius: 8px;
   margin: auto;
 }
 
@@ -162,7 +162,7 @@
 .add-icon {
   font-size: 20px;
   color: #ffca40;
-  margin-top: 115px;
+  margin-top: 130px;
   margin-bottom: 20px;
 }
 
