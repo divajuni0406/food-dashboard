@@ -1,0 +1,119 @@
+.header-dashboard {
+  padding: 15px 0 20px 0;
+  border-bottom: 1px solid #393c49;
+  margin-bottom: 20px;
+}
+
+.header-dashboard h1,
+.header-dashboard span {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+}
+
+.header-dashboard h1 {
+  font-size: 28px;
+  color: #ffffff;
+}
+
+.header-dashboard span {
+  font-size: 16px;
+  color: #abbbc2;
+}
+
+.total-revenue-wrapper {
+  background: #1f1d2b;
+  border-radius: 8px;
+  padding: 12px 15px 12px 15px;
+  margin-bottom: 20px;
+}
+
+.top-inside-revenue {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.icon-revenue {
+  background: #252836;
+  border-radius: 8px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.dollar {
+  color: #9288e0;
+}
+.bookmark {
+  color: #ffb572;
+}
+.people {
+  color: #65b0f6;
+}
+
+.revenue-number {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+  color: #50d1aa;
+  margin: 0 10px 0 10px;
+}
+
+.icon-2-revenue {
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  font-size: 18px;
+  padding: 5px;
+}
+
+.up {
+  color: #50d1aa;
+  background: rgba(136, 224, 145, 0.24);
+}
+
+.down {
+  background: rgba(255, 100, 113, 0.24);
+  color: #ff7ca3;
+}
+
+.revenue-price {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 140%;
+  color: #ffffff;
+}
+
+.text-total-revenue {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 130%;
+  color: #abbbc2;
+}
+
+.order-title-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 20px 20px 0 20px;
+}
+
+.order-title-wrapper h1 {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 140%;
+  color: #ffffff;
+}

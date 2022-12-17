@@ -108,7 +108,6 @@
   background: #2d303e;
   border: 1px solid #393c49;
   border-radius: 8px;
-  flex: none;
   order: 1;
   flex-grow: 0;
 }
@@ -133,7 +132,6 @@
   font-size: 14px;
   line-height: 140%;
   color: #abbbc2;
-  flex: none;
   order: 1;
   flex-grow: 0;
 }
@@ -225,6 +223,15 @@
   color: #e0e6e9;
 }
 
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
 .box-menu {
   display: flex;
   flex-direction: column;
@@ -291,23 +298,39 @@
   color: white;
 }
 
-.right-content::-webkit-scrollbar {
-  display: none;
-}
-
 .right-content {
   position: fixed;
   top: 0;
   right: 0;
   background: #1f1d2b;
   width: 35%;
-  overflow-y: scroll;
-  height: 100vh;
   padding: 30px 30px 90px 30px;
   border-radius: 16px;
 }
 
-.content-wrapper h1 {
+.top-content-order {
+  position: absolute;
+  top: 0;
+  background: #1f1d2b;
+  width: 100%;
+  left: 0;
+  z-index: 1;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  padding: 20px 30px 0 30px;
+}
+
+.content-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.content-wrapper {
+  overflow-y: scroll;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.top-content-order h1 {
   font-family: "Barlow";
   font-style: normal;
   font-weight: 600;
@@ -338,6 +361,11 @@
   transition: all 0.5s;
 }
 
+.btn-eat:hover {
+  background: #ffca40;
+  color: white;
+}
+
 .btn-eat-active {
   background: #ffca40;
   color: white;
@@ -347,6 +375,7 @@
   margin-top: 20px;
   display: flex;
   justify-content: space-between;
+  padding: 0 30px 0 30px;
 }
 
 .text-title-row {
@@ -367,6 +396,12 @@
   background: #393c49;
   margin-top: 15px;
   margin-bottom: 15px;
+}
+
+.pay-products-wrapper {
+  padding-top: 110px;
+  padding-bottom: 200px;
+  padding: 110px 10px 200px 10px;
 }
 
 .pay-img-wrapper img {
@@ -393,13 +428,14 @@
   color: #abbbc2;
 }
 
-.quantity span {
+.quantity input {
   background: #2d303e;
   border: 1px solid #393c49;
   border-radius: 8px;
   display: flex;
-  padding: 10px 10px 10px 10px;
-  width: 70%;
+  padding: 15px 0;
+  width: 50px;
+  text-align: center;
   align-items: center;
   justify-content: center;
   font-family: "Barlow";
@@ -419,9 +455,10 @@
 .increment {
   color: #ffca40;
   font-size: 40px;
-  margin-bottom: -40px;
-  margin-top: -20px;
   align-self: center;
+  cursor: pointer;
+  position: relative;
+  top: -5px;
 }
 
 .decrement {
@@ -429,6 +466,8 @@
   font-size: 40px;
   align-self: center;
   cursor: pointer;
+  position: relative;
+  top: -15px;
 }
 
 .price {
@@ -566,6 +605,7 @@
   font-size: 14px;
   color: #ffffff;
   padding: 12px 0 12px 0;
+  box-shadow: 0px 8px 24px rgba(255, 202, 64, 0.3);
 }
 
 @keyframes fadeIn {

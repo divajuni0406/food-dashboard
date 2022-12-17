@@ -6,6 +6,7 @@ import { AiOutlineDelete } from "react-icons/ai";
 import "../css/Home.css";
 import { Link } from "react-router-dom";
 import foods from "../foods.json";
+import orders from "../orders.json";
 import _ from "lodash";
 import { useSelector, useDispatch } from "react-redux";
 import { payment } from "../redux/actions/userActivities";
@@ -13,6 +14,7 @@ import Payment from "./Payment";
 
 const Home = () => {
   const [dishType, setDishType] = useState("hot");
+  const [Orders, setOrders] = useState([]);
   const [whereToEat, setWhereToEat] = useState("dine in");
   const [whereToEatDrop, setWhereToEatDrop] = useState("Dine In");
   const [toggleDropdown, setToggleDropdown] = useState(false);
@@ -20,6 +22,61 @@ const Home = () => {
   const dispatch = useDispatch();
 
   const { isPayment } = useSelector((store) => store.userActivities);
+
+  const increment = (index) => {
+    let quantity = document.querySelector("#quantity-" + index);
+    let totalPrice = document.querySelector("#total-price-" + index);
+    quantity.value++;
+
+    let total = parseInt(Orders[index].price) * quantity.value;
+    totalPrice.innerHTML = currencyFormat(total);
+    Orders[index].totalPrice = total.toString();
+
+    grandTotal();
+  };
+
+  const calculation = (event) => {
+    console.log(event.target.value);
+  };
+
+  const decrement = (index) => {
+    let quantity = document.querySelector("#quantity-" + index);
+    let totalPrice = document.querySelector("#total-price-" + index);
+
+    if (quantity.value === 1) {
+      quantity.value = 1;
+    } else {
+      quantity.value--;
+    }
+
+    let total = parseInt(Orders[index].price) * quantity.value;
+    totalPrice.innerHTML = currencyFormat(total);
+    Orders[index].totalPrice = total.toString();
+    grandTotal();
+  };
+
+  const grandTotal = () => {
+    let subtotal = document.querySelector("#subtotal");
+    let grandTotal = _.sumBy(Orders, function (order) {
+      return parseInt(order.totalPrice);
+    });
+
+    subtotal.innerHTML = currencyFormat(grandTotal);
+  };
+
+  const deleteOrder = (index) => {
+    let listOrder = Orders.splice(index, 1);
+    setOrders(listOrder);
+  };
+
+  const currencyFormat = (num) => {
+    return (
+      "Rp. " +
+      parseInt(num)
+        .toFixed(0)
+        .replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.")
+    );
+  };
 
   const handlePayment = (e) => {
     e.preventDefault();
@@ -32,6 +89,8 @@ const Home = () => {
     let cold = document.querySelector("#cold");
     let boxMenuHot = document.querySelector("#box-menu-hot");
     let boxMenuCold = document.querySelector("#box-menu-cold");
+    setOrders(orders);
+    grandTotal();
 
     if (dishType === "hot") {
       hot.classList.add("nav-food-active");
@@ -45,7 +104,7 @@ const Home = () => {
       hot.classList.remove("nav-food-active");
       cold.classList.remove("nav-food-active");
     }
-  }, [dishType]);
+  }, [dishType, Orders]);
 
   return (
     <div className="bg-home">
@@ -168,7 +227,7 @@ const Home = () => {
           </div>
         </div>
         <div className="right-content">
-          <div className="content-wrapper">
+          <div className="top-content-order">
             <h1>Orders #34562</h1>
             <div className="btn-eat-wrapper">
               <button
@@ -202,225 +261,53 @@ const Home = () => {
                 <span className="text-title-row">Price</span>
               </div>
             </div>
+          </div>
+          <div className="content-wrapper">
             <div className="divider-2"></div>
             <div className="pay-products-wrapper">
-              <div className="row mb-4">
-                <div className="col-md-2 text-center pay-img-wrapper">
-                  <img src="/images/content/cold_1.jpg" alt="" />
+              {Orders.map((order, index) => (
+                <div className="row mb-4" key={index}>
+                  <div className="col-md-2 text-center pay-img-wrapper">
+                    <img src={`/images/content/${order.image}`} alt="" />
+                  </div>
+                  <div className="col-md-5 pay-product-text">
+                    <p>{order.name}</p>
+                    <span>{currencyFormat(order.price)}</span>
+                  </div>
+                  <div className="col-md-2 quantity">
+                    <input
+                      type="number"
+                      id={`quantity-${index}`}
+                      readOnly
+                      onChange={calculation}
+                      value={order.qty}
+                    />
+                  </div>
+                  <div className="col-md-1 increment-wrapper">
+                    <MdArrowDropUp
+                      className="increment"
+                      onClick={() => increment(index)}
+                    />
+                    <MdArrowDropDown
+                      className="decrement"
+                      onClick={() => decrement(index)}
+                    />
+                  </div>
+                  <div className="col-md-2 price">
+                    <p id={`total-price-${index}`}>
+                      {currencyFormat(order.totalPrice)}
+                    </p>
+                  </div>
+                  <div className="col-md-10 note-input mt-3 mb-3">
+                    <input type="text" placeholder="Order Note..." />
+                  </div>
+                  <div className="col-md-2 delete-icon mt-3 mb-3">
+                    <span onClick={() => deleteOrder(index)}>
+                      <AiOutlineDelete />
+                    </span>
+                  </div>
                 </div>
-                <div className="col-md-5 pay-product-text">
-                  <p>Spicy seasoned sea...</p>
-                  <span>Rp.43.000</span>
-                </div>
-                <div className="col-md-2 quantity">
-                  <span>2</span>
-                </div>
-                <div className="col-md-1 increment-wrapper">
-                  <span className="increment">
-                    <MdArrowDropUp />
-                  </span>
-                  <span className="decrement">
-                    <MdArrowDropDown />
-                  </span>
-                </div>
-                <div className="col-md-2 price">
-                  <p>Rp.86.000</p>
-                </div>
-                <div className="col-md-10 note-input mt-3 mb-3">
-                  <input type="text" placeholder="Order Note..." />
-                </div>
-                <div className="col-md-2 delete-icon mt-3 mb-3">
-                  <span>
-                    <AiOutlineDelete />
-                  </span>
-                </div>
-              </div>
-              <div className="row mb-4">
-                <div className="col-md-2 text-center pay-img-wrapper">
-                  <img src="/images/content/cold_1.jpg" alt="" />
-                </div>
-                <div className="col-md-5 pay-product-text">
-                  <p>Spicy seasoned sea...</p>
-                  <span>Rp.43.000</span>
-                </div>
-                <div className="col-md-2 quantity">
-                  <span>2</span>
-                </div>
-                <div className="col-md-1 increment-wrapper">
-                  <span className="increment">
-                    <MdArrowDropUp />
-                  </span>
-                  <span className="decrement">
-                    <MdArrowDropDown />
-                  </span>
-                </div>
-                <div className="col-md-2 price">
-                  <p>Rp.86.000</p>
-                </div>
-                <div className="col-md-10 note-input mt-3 mb-3">
-                  <input type="text" placeholder="Order Note..." />
-                </div>
-                <div className="col-md-2 delete-icon mt-3 mb-3">
-                  <span>
-                    <AiOutlineDelete />
-                  </span>
-                </div>
-              </div>
-              <div className="row mb-4">
-                <div className="col-md-2 text-center pay-img-wrapper">
-                  <img src="/images/content/cold_1.jpg" alt="" />
-                </div>
-                <div className="col-md-5 pay-product-text">
-                  <p>Spicy seasoned sea...</p>
-                  <span>Rp.43.000</span>
-                </div>
-                <div className="col-md-2 quantity">
-                  <span>2</span>
-                </div>
-                <div className="col-md-1 increment-wrapper">
-                  <span className="increment">
-                    <MdArrowDropUp />
-                  </span>
-                  <span className="decrement">
-                    <MdArrowDropDown />
-                  </span>
-                </div>
-                <div className="col-md-2 price">
-                  <p>Rp.86.000</p>
-                </div>
-                <div className="col-md-10 note-input mt-3 mb-3">
-                  <input type="text" placeholder="Order Note..." />
-                </div>
-                <div className="col-md-2 delete-icon mt-3 mb-3">
-                  <span>
-                    <AiOutlineDelete />
-                  </span>
-                </div>
-              </div>
-              <div className="row mb-4">
-                <div className="col-md-2 text-center pay-img-wrapper">
-                  <img src="/images/content/cold_1.jpg" alt="" />
-                </div>
-                <div className="col-md-5 pay-product-text">
-                  <p>Spicy seasoned sea...</p>
-                  <span>Rp.43.000</span>
-                </div>
-                <div className="col-md-2 quantity">
-                  <span>2</span>
-                </div>
-                <div className="col-md-1 increment-wrapper">
-                  <span className="increment">
-                    <MdArrowDropUp />
-                  </span>
-                  <span className="decrement">
-                    <MdArrowDropDown />
-                  </span>
-                </div>
-                <div className="col-md-2 price">
-                  <p>Rp.86.000</p>
-                </div>
-                <div className="col-md-10 note-input mt-3 mb-3">
-                  <input type="text" placeholder="Order Note..." />
-                </div>
-                <div className="col-md-2 delete-icon mt-3 mb-3">
-                  <span>
-                    <AiOutlineDelete />
-                  </span>
-                </div>
-              </div>
-              <div className="row mb-4">
-                <div className="col-md-2 text-center pay-img-wrapper">
-                  <img src="/images/content/cold_1.jpg" alt="" />
-                </div>
-                <div className="col-md-5 pay-product-text">
-                  <p>Spicy seasoned sea...</p>
-                  <span>Rp.43.000</span>
-                </div>
-                <div className="col-md-2 quantity">
-                  <span>2</span>
-                </div>
-                <div className="col-md-1 increment-wrapper">
-                  <span className="increment">
-                    <MdArrowDropUp />
-                  </span>
-                  <span className="decrement">
-                    <MdArrowDropDown />
-                  </span>
-                </div>
-                <div className="col-md-2 price">
-                  <p>Rp.86.000</p>
-                </div>
-                <div className="col-md-10 note-input mt-3 mb-3">
-                  <input type="text" placeholder="Order Note..." />
-                </div>
-                <div className="col-md-2 delete-icon mt-3 mb-3">
-                  <span>
-                    <AiOutlineDelete />
-                  </span>
-                </div>
-              </div>
-              <div className="row mb-4">
-                <div className="col-md-2 text-center pay-img-wrapper">
-                  <img src="/images/content/cold_1.jpg" alt="" />
-                </div>
-                <div className="col-md-5 pay-product-text">
-                  <p>Spicy seasoned sea...</p>
-                  <span>Rp.43.000</span>
-                </div>
-                <div className="col-md-2 quantity">
-                  <span>2</span>
-                </div>
-                <div className="col-md-1 increment-wrapper">
-                  <span className="increment">
-                    <MdArrowDropUp />
-                  </span>
-                  <span className="decrement">
-                    <MdArrowDropDown />
-                  </span>
-                </div>
-                <div className="col-md-2 price">
-                  <p>Rp.86.000</p>
-                </div>
-                <div className="col-md-10 note-input mt-3 mb-3">
-                  <input type="text" placeholder="Order Note..." />
-                </div>
-                <div className="col-md-2 delete-icon mt-3 mb-3">
-                  <span>
-                    <AiOutlineDelete />
-                  </span>
-                </div>
-              </div>
-              <div className="row mb-4">
-                <div className="col-md-2 text-center pay-img-wrapper">
-                  <img src="/images/content/cold_1.jpg" alt="" />
-                </div>
-                <div className="col-md-5 pay-product-text">
-                  <p>Spicy seasoned sea...</p>
-                  <span>Rp.43.000</span>
-                </div>
-                <div className="col-md-2 quantity">
-                  <span>2</span>
-                </div>
-                <div className="col-md-1 increment-wrapper">
-                  <span className="increment">
-                    <MdArrowDropUp />
-                  </span>
-                  <span className="decrement">
-                    <MdArrowDropDown />
-                  </span>
-                </div>
-                <div className="col-md-2 price">
-                  <p>Rp.86.000</p>
-                </div>
-                <div className="col-md-10 note-input mt-3 mb-3">
-                  <input type="text" placeholder="Order Note..." />
-                </div>
-                <div className="col-md-2 delete-icon mt-3 mb-3">
-                  <span>
-                    <AiOutlineDelete />
-                  </span>
-                </div>
-              </div>
+              ))}
             </div>
             <div className="confirmation-payment-area">
               <div className="divider-3"></div>
@@ -430,7 +317,7 @@ const Home = () => {
               </div>
               <div className="subTotal-wrapper">
                 <span>Sub total</span>
-                <span>Rp.295.000</span>
+                <span id="subtotal">Rp. 0</span>
               </div>
               <div className="btn-payment">
                 <button onClick={handlePayment}>Continue to Payment</button>

@@ -29,20 +29,22 @@
 
 .brand-icon {
   color: #ffca40;
-  font-size: 35px;
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 16px;
   gap: 10px;
-
   width: 56px;
   height: 56px;
   margin-top: 9px;
   margin-left: 10px;
-
   background: rgb(129, 86, 7);
   box-shadow: 0px 8px 24px rgba(255, 202, 64, 0.32);
   border-radius: 8px;
+}
+
+.brand-icon img {
+  width: 100%;
 }
 
 .logo-icon:hover {
@@ -55,6 +57,38 @@
   margin: 20px 10px 10px 10px;
   border-radius: 12px 0px 0px 12px;
   position: relative;
+}
+
+.icon-navbar-active {
+  background: #252836;
+}
+
+.icon-navbar-active + .icon-navbar-wrapper::after {
+  background-image: url("../../public/images/Content/Rectangle\ 25.png");
+  content: "";
+  position: absolute;
+  top: -31px;
+  left: 82px;
+  width: 12.02px;
+  height: 12px;
+}
+
+.icon-navbar-active + .icon-navbar-wrapper::before {
+  background-image: url("../../public/images/Content/Rectangle\ 25.png");
+  content: "";
+  position: absolute;
+  top: -116px;
+  left: 83px;
+  width: 12.02px;
+  height: 12px;
+  transform: rotate(90deg);
+}
+
+.icon-navbar-active > .icon-navbar {
+  color: white;
+  background: #ffca40;
+  box-shadow: 0px 8px 24px rgba(255, 202, 64, 0.32);
+  border-radius: 8px;
 }
 
 .icon-navbar-wrapper:focus {
@@ -89,12 +123,10 @@
   align-items: center;
   padding: 16px;
   gap: 10px;
-
   width: 56px;
   height: 56px;
   margin-top: 9px;
   margin-left: 10px;
-
   background: transparent;
   box-shadow: none;
   border-radius: 8px;

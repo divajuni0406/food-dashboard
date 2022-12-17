@@ -1,0 +1,42 @@
+[
+  {
+    "image": "cold_1.jpg",
+    "name": "Ice Cream Vanilla with sugar balmon",
+    "qty": 1,
+    "price": "43000",
+    "totalPrice": "43000",
+    "orderNote": ""
+  },
+  {
+    "image": "cold_2.jpg",
+    "name": "Vanilla Cream with colorful ice",
+    "qty": 1,
+    "price": "35000",
+    "totalPrice": "35000",
+    "orderNote": ""
+  },
+  {
+    "image": "hot_1.jpg",
+    "name": "Spicy seasoned seafood noodles",
+    "qty": 1,
+    "price": "43000",
+    "totalPrice": "43000",
+    "orderNote": ""
+  },
+  {
+    "image": "hot_2.png",
+    "name": "Salted Pasta with mushroom sauce",
+    "qty": 1,
+    "price": "35000",
+    "totalPrice": "35000",
+    "orderNote": ""
+  },
+  {
+    "image": "hot_4.png",
+    "name": "Beef dumpling in hot and sour soup",
+    "qty": 1,
+    "price": "65000",
+    "totalPrice": "65000",
+    "orderNote": ""
+  }
+]

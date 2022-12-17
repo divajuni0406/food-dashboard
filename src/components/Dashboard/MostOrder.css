@@ -1,0 +1,128 @@
+.most-ordered-wrapper {
+  background: #1f1d2b;
+  position: fixed;
+  right: 30px;
+  top: 30px;
+  width: 25%;
+  border-radius: 8px;
+  z-index: 1;
+}
+
+.top-most-order {
+  display: flex;
+  padding: 20px 20px 20px 20px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.top-most-order h1 {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 140%;
+  color: #ffffff;
+  order: 0;
+  flex-grow: 0;
+}
+
+.divider-most-order {
+  content: "";
+  height: 1px;
+  background-color: #393c49;
+  position: relative;
+  bottom: 10px;
+  display: flex;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.most-food-general::-webkit-scrollbar {
+  display: none;
+}
+
+.most-food-general {
+  padding: 10px 20px 10px 10px;
+  overflow-y: scroll;
+  transition: all 0.5s;
+}
+
+.hide {
+  height: 27vh;
+}
+
+.all {
+  height: 72vh;
+}
+
+.most-food-wrapper {
+  margin-bottom: 20px;
+}
+
+.most-food-img img {
+  border-radius: 50%;
+  width: 60%;
+}
+
+.most-food-description h1 {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 130%;
+  color: #e0e6e9;
+  order: 0;
+  flex-grow: 0;
+  margin-bottom: 0;
+}
+
+.most-food-description span {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  color: #abbbc2;
+  order: 1;
+  flex-grow: 0;
+}
+
+.show-button-wrapper {
+  position: relative;
+  bottom: 9px;
+  background-color: #1f1d2b;
+  height: 12vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.show-button-wrapper button {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 140%;
+  order: 0;
+  flex-grow: 0;
+  width: 20%;
+  height: 50px;
+  width: 372px;
+
+  padding: 12px;
+  border-radius: 8px;
+  transition: all 0.5s;
+}
+
+.btn-hide {
+  border: 1px solid #ea7c69;
+  background: transparent;
+  color: #ea7c69;
+}
+.btn-showAll {
+  border: 1px solid #ffca40;
+  background: transparent;
+  color: #ffca40;
+}

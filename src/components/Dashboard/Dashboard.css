@@ -1,0 +1,11 @@
+.bg-dashboard {
+  min-height: 100vh;
+  background: #252836;
+}
+
+.content-dashboard-center {
+  position: absolute;
+  width: 58%;
+  left: 130px;
+  top: 0;
+}
