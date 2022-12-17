@@ -2,19 +2,12 @@ import React, { useEffect, useState, useRef } from "react";
 import "./FoodHome.css";
 import { RiArrowDropDownLine, RiArrowDropUpLine } from "react-icons/ri";
 import foods from "../../foods.json";
-import { useDispatch } from "react-redux";
-import { addOrder } from "../../redux/actions/userActivities";
 import _ from "lodash";
 
 const FoodsHome = ({ dishType }) => {
-  const dispatch = useDispatch();
   const [whereToEatDrop, setWhereToEatDrop] = useState("Dine In");
   const [toggleDropdown, setToggleDropdown] = useState(false);
   const boxMenu = useRef(null);
-
-  const addNewOrder = (index) => {
-    dispatch(addOrder(foods[index]));
-  };
 
   const currencyFormat = (num) => {
     return (
@@ -76,11 +69,7 @@ const FoodsHome = ({ dishType }) => {
         <div className="row mt-5 general-product" ref={boxMenu}>
           {dishType === "hot" || dishType === "cold" ? (
             _.filter(foods, { type: dishType }).map((food, index) => (
-              <div
-                className="col-md-4"
-                key={index}
-                onClick={(e) => addNewOrder(index)}
-              >
+              <div className="col-md-4" key={index}>
                 <div className="box-menu">
                   <img src={`/images/Content/${food.image}`} alt="" />
                   <h1>{food.food_name}</h1>

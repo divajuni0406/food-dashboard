@@ -30,12 +30,6 @@ const userActivities = createSlice({
     DishType: (state, action) => {
       state.myDishType = action.payload;
     },
-    addOrder: (state, action) => {
-      if (state.order) {
-        state.order = {};
-      }
-      state.order = action.payload;
-    },
   },
 });
 
@@ -46,6 +40,5 @@ export const {
   createSuccess,
   modalOpen,
   DishType,
-  addOrder,
 } = userActivities.actions;
 export default userActivities.reducer;

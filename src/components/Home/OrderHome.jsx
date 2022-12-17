@@ -4,7 +4,7 @@ import { MdArrowDropUp, MdArrowDropDown } from "react-icons/md";
 import { AiOutlineDelete } from "react-icons/ai";
 import { payment } from "../../redux/actions/userActivities";
 import _ from "lodash";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import orders from "../../orders.json";
 
 const OrderHome = () => {
@@ -17,8 +17,6 @@ const OrderHome = () => {
   }, [Orders]);
 
   const dispatch = useDispatch();
-  const { isPayment } = useSelector((store) => store.userActivities);
-
   const increment = (index) => {
     let quantity = document.querySelector("#quantity-" + index);
     let totalPrice = document.querySelector("#total-price-" + index);
