@@ -1,16 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./TableDashboard.css";
 import { GoSettings } from "react-icons/go";
-import customer from "../../customer.json";
+import customers from "../../customer.json";
+import _ from "lodash";
 
 const TableDashboard = () => {
+  const [reportOrders, setReportOrders] = useState([]);
+  const [sortType, setSortType] = useState("desc");
+
+  const sortOrder = () => {
+    if (sortType == "asc") {
+      setSortType("desc");
+    } else {
+      setSortType("asc");
+    }
+
+    let listReportOrders = _.orderBy(reportOrders, ["status"], [sortType]);
+    setReportOrders(listReportOrders);
+  };
+
+  useEffect(() => {
+    setReportOrders(customers);
+  }, [customers]);
   return (
     <>
       <div className="order-report-wrapper">
         <div className="order-title-general">
           <div className="order-title-wrapper">
             <h1>Order Report</h1>
-            <button className="btn-filter">
+            <button className="btn-filter" onClick={() => sortOrder()}>
               <span className="filter-icon">
                 <GoSettings />
               </span>
@@ -28,7 +46,7 @@ const TableDashboard = () => {
                 </tr>
               </thead>
               <tbody>
-                {customer.map((data, index) => (
+                {reportOrders.map((data, index) => (
                   <tr key={index}>
                     <td>
                       <img

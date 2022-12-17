@@ -26,6 +26,7 @@ const TopHome = () => {
       cold.classList.remove("nav-food-active");
     }
   }, [dishType]);
+
   return (
     <div className="center-content">
       <div className="top-content-area">
