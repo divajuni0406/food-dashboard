@@ -12,13 +12,32 @@ const OrderHome = () => {
   const [Orders, setOrders] = useState([]);
 
   useEffect(() => {
-    grandTotal();
     setOrders(orders);
+    grandTotal();
   }, [Orders]);
 
   const dispatch = useDispatch();
+  const { isPayment, order } = useSelector((store) => store.userActivities);
 
-  const { isPayment } = useSelector((store) => store.userActivities);
+  const getNewOrder = (order) => {
+    let newOrder = {
+      image: order.image,
+      name: order.food_name,
+      price: order.price,
+      totalPrice: order.price,
+      qty: 1,
+      orderNote: "",
+    };
+
+    let dataOrder = Orders;
+    dataOrder.push(newOrder);
+    console.log(dataOrder);
+    // setOrders(dataOrder);
+  };
+
+  if (!_.isEmpty(order)) {
+    getNewOrder(order);
+  }
 
   const increment = (index) => {
     let quantity = document.querySelector("#quantity-" + index);

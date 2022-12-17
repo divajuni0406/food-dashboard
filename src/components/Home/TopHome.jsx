@@ -10,17 +10,13 @@ const TopHome = () => {
   useEffect(() => {
     let hot = document.querySelector("#hot");
     let cold = document.querySelector("#cold");
-    let boxMenuHot = document.querySelector("#box-menu-hot");
-    let boxMenuCold = document.querySelector("#box-menu-cold");
 
     if (dishType === "hot") {
       hot.classList.add("nav-food-active");
       cold.classList.remove("nav-food-active");
-      boxMenuHot.classList.add("box-menu-active");
     } else if (dishType === "cold") {
       hot.classList.remove("nav-food-active");
       cold.classList.add("nav-food-active");
-      boxMenuCold.classList.add("box-menu-active");
     } else {
       hot.classList.remove("nav-food-active");
       cold.classList.remove("nav-food-active");

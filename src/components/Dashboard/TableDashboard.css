@@ -5,7 +5,7 @@
   flex-grow: 0;
   padding: 30px 20px 20px 25px;
   position: relative;
-  height: calc(100vh - 320px);
+  height: calc(98vh - 320px);
 }
 
 .order-title-general {

@@ -1,10 +1,45 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./MostType.css";
 import { RiArrowDropUpLine, RiArrowDropDownLine } from "react-icons/ri";
+import ApexCharts from "apexcharts";
 
 const MostType = ({ isShowAll }) => {
   const [whereToEatDrop, setWhereToEatDrop] = useState("Today");
   const [toggleDropdown, setToggleDropdown] = useState(false);
+
+  useEffect(() => {
+    let chart = document.getElementById("chart");
+
+    while (chart.firstChild) chart.removeChild(chart.firstChild);
+    let orderList = {
+      chart: {
+        height: 280,
+        width: "100%",
+        type: "radialBar",
+      },
+      colors: ["#FFCF00", "#FFA900", "#DF8109"],
+      series: [54, 80, 90],
+      plotOptions: {
+        radialBar: {
+          hollow: {
+            margin: 0,
+            size: "55%",
+            background: "#1f1d2b",
+          },
+          track: {
+            background: "#393c49",
+            margin: 1,
+          },
+        },
+      },
+      stroke: {
+        lineCap: "round",
+      },
+      labels: ["Dine In", "To Go", "Delivery"],
+    };
+
+    new ApexCharts(document.querySelector("#chart"), orderList).render();
+  }, []);
   return (
     <div
       className={`type-order-wrapper ${isShowAll ? "type-order-hidden" : ""}`}
@@ -49,8 +84,8 @@ const MostType = ({ isShowAll }) => {
       </div>
       <div className="divider-most-type"></div>
       <div className="chart-area">
-        <div>kjakja</div>
-        <div>akhkha</div>
+        <div id="chart"></div>
+        <div>sdsdsd sdsd</div>
       </div>
     </div>
   );
