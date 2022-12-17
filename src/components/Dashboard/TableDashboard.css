@@ -112,6 +112,22 @@ table td {
   margin-right: 10px;
 }
 
+.avatar-blue {
+  background-color: blue;
+}
+.avatar-pink {
+  background-color: pink;
+}
+.avatar-cyan {
+  background-color: cyan;
+}
+.avatar-purple {
+  background-color: purple;
+}
+.avatar-chocolate {
+  background-color: chocolate;
+}
+
 table td span {
   font-family: "Barlow";
   font-style: normal;
@@ -170,15 +186,15 @@ table td span {
   margin-top: 15px;
 }
 
-.completed {
+.Completed {
   color: #50d1aa;
   background: rgba(107, 226, 190, 0.24);
 }
-.preparing {
+.Preparing {
   color: #9290fe;
   background: rgba(146, 144, 254, 0.2);
 }
-.pending {
+.Pending {
   color: #ffb572;
   background: rgba(255, 181, 114, 0.2);
 }

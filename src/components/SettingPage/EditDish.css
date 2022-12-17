@@ -1,88 +1,3 @@
-.bg-setting {
-  min-height: 100vh;
-  background: #252836;
-}
-
-.title-setting {
-  font-family: "Barlow";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 28px;
-  line-height: 140%;
-  color: #ffffff;
-  padding: 15px;
-  position: absolute;
-  left: 120px;
-}
-
-.setting-wrapper::-webkit-scrollbar {
-  display: none;
-}
-
-.setting-wrapper {
-  background: #1f1d2b;
-  position: fixed;
-  left: 120px;
-  top: 70px;
-  height: calc(100% - 70px);
-  border-radius: 10px;
-  width: 90%;
-  overflow-y: scroll;
-}
-
-.top-content-setting {
-  background: #1f1d2b;
-  position: fixed;
-  top: 70px;
-  left: 120px;
-  width: 90%;
-  z-index: 1;
-  border-radius: 10px;
-  padding: 35px 35px 0 35px;
-}
-
-.content-setting {
-  padding: 150px 20px 0 20px;
-}
-
-.top-title-wrapper {
-  display: flex;
-  justify-content: space-between;
-  width: 80%;
-}
-
-.top-title-wrapper h1 {
-  font-family: "Barlow";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 140%;
-  color: #ffffff;
-}
-
-.btn-setting {
-  border-radius: 10px;
-  border: #252836 solid 2px;
-  background: transparent;
-  width: 19%;
-  padding: 10px 5px;
-}
-
-.top-title-wrapper .setting-icon {
-  font-size: 20px;
-  color: white;
-  margin-right: 5px;
-}
-
-.top-title-wrapper .text-manage {
-  font-family: "Barlow";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 140%;
-  color: #ffffff;
-}
-
 .box-product-area {
   padding: 30px 90px 0 20px;
 }
@@ -97,6 +12,9 @@
   position: relative;
   border-radius: 8px;
   margin: auto;
+  padding-bottom: 80px;
+  height: 45vh;
+  animation: fadeIn 0.5s;
 }
 
 .food-wrapper img {
@@ -115,7 +33,8 @@
   line-height: 130%;
   text-align: center;
   color: #ffffff;
-  padding: 10px 0 10px 0;
+  height: 10vh;
+  padding-top: 10px;
 }
 
 .food-wrapper span {
@@ -125,13 +44,20 @@
   font-size: 14px;
   line-height: 140%;
   color: #abbbc2;
-  margin-right: 10px;
-  padding-bottom: 80px;
+  /* padding-bottom: 80px; */
 }
 
 .stock-product {
   display: flex;
   justify-content: center;
+}
+
+.dot-icon {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  color: #abbbc2;
+  margin: 0 3px 0 3px;
 }
 
 .add-wrapper {
@@ -161,7 +87,7 @@
 .add-icon {
   font-size: 20px;
   color: #ffca40;
-  margin-top: 130px;
+  margin-top: 17vh;
   margin-bottom: 20px;
 }
 

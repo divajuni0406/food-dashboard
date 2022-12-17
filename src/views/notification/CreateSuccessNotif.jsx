@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import "../css/CreateSuccessNotif.css";
-import { createSuccess } from "../redux/actions/userActivities";
+import "../../css/CreateSuccessNotif.css";
+import { createSuccess } from "../../redux/actions/userActivities";
 import { useDispatch, useSelector } from "react-redux";
 
 const CreateSuccessNotif = () => {

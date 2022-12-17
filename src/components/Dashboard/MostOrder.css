@@ -59,6 +59,7 @@
 
 .most-food-wrapper {
   margin-bottom: 20px;
+  animation: fadeIn 0.5s;
 }
 
 .most-food-img img {

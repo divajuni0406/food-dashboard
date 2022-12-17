@@ -1,9 +1,9 @@
 import React from "react";
-import "../css/AddDishModal.css";
+import "../../css/AddDishModal.css";
 import { IoAddSharp } from "react-icons/io5";
 import { IoIosArrowRoundBack } from "react-icons/io";
-import CreateSuccessNotif from "./CreateSuccessNotif";
-import { createSuccess, modalOpen } from "../redux/actions/userActivities";
+import CreateSuccessNotif from "../notification/CreateSuccessNotif";
+import { createSuccess, modalOpen } from "../../redux/actions/userActivities";
 import { useDispatch, useSelector } from "react-redux";
 
 const AddDishModal = () => {

@@ -1,7 +1,7 @@
 import React from "react";
-import "../css/LogoutNotif.css";
+import "../../css/LogoutNotif.css";
 import { useDispatch } from "react-redux";
-import { login } from "../redux/actions/userActivities";
+import { login } from "../../redux/actions/userActivities";
 
 const LogoutNotif = () => {
   const dispatch = useDispatch();

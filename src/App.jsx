@@ -4,7 +4,7 @@ import Dashboard from "./views/Dashboard";
 import Setting from "./views/Setting";
 import Home from "./views/Home";
 import Navbar from "./views/Navbar";
-import LogoutNotif from "./views/LogoutNotif";
+import LogoutNotif from "./views/notification/LogoutNotif";
 import { useSelector } from "react-redux";
 
 function App() {

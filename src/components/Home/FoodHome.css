@@ -1,0 +1,147 @@
+.choose-dish-area {
+  display: flex;
+  justify-content: space-between;
+}
+
+.choose-dish-text span {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  color: white;
+}
+
+.btn-dropdown-eat {
+  background: #1f1d2b;
+  border: 1px solid #393c49;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  width: 100px;
+}
+
+.btn-dropdown-eat h4 {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #e0e6e9;
+  margin-left: 5px;
+  margin-top: 8px;
+}
+
+.btn-dropdown-eat span {
+  color: white;
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+
+.dropdown-eat-area {
+  position: absolute;
+  width: 100%;
+  top: 40px;
+  z-index: 1;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: 1px solid #393c49;
+  background: #1f1d2b;
+  opacity: 0;
+  visibility: visible;
+  transition: all 0.5s;
+  padding: 8px;
+}
+
+.dropdown-eat-area-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown-eat-area option {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #e0e6e9;
+}
+
+.general-product::-webkit-scrollbar {
+  display: none;
+}
+
+.general-product {
+  height: 100vh;
+  overflow-y: scroll;
+  padding-top: 40px;
+  padding-bottom: 250px;
+  position: relative;
+  top: -30px;
+  animation: fadeIn 0.5s;
+}
+
+.box-menu {
+  display: flex;
+  flex-direction: column;
+  background: #1f1d2b;
+  border-radius: 16px;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+  height: calc(100% - 60px);
+  margin-bottom: 70px;
+  width: 90%;
+}
+
+.box-menu.box-menu-active {
+  animation: fadeIn 1s;
+}
+
+.box-menu img {
+  border-radius: 50%;
+  position: relative;
+  top: -45px;
+  left: 60px;
+  width: 60%;
+}
+
+.box-menu h1 {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  color: white;
+  margin-top: -20px;
+  padding: 0 30px 0 30px;
+  height: 100%;
+  overflow-wrap: break-word;
+}
+
+.box-menu h2 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: white;
+  margin-top: 5px;
+}
+
+.box-menu h3 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: #abbbc2;
+  margin-top: 5px;
+  padding-bottom: 10px;
+}
+
+.not-available-content span {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  color: white;
+}

@@ -1,6 +1,7 @@
 import React from "react";
 import "./TableDashboard.css";
 import { GoSettings } from "react-icons/go";
+import customer from "../../customer.json";
 
 const TableDashboard = () => {
   return (
@@ -27,253 +28,29 @@ const TableDashboard = () => {
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>
-                    <img
-                      src="/images/avatar/avatar-1.png"
-                      className="avatar"
-                      alt=""
-                    />{" "}
-                    <span>Sofian Hadi</span>
-                  </td>
-                  <td>
-                    <span>Spicy seasoned seafood noodles</span>
-                  </td>
-                  <td>
-                    <span>Rp. 43.000</span>
-                  </td>
-                  <td>
-                    <p className="status-table completed">Completed</p>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <img
-                      src="/images/avatar/avatar-1.png"
-                      className="avatar"
-                      alt=""
-                    />{" "}
-                    <span>Sofian Hadi</span>
-                  </td>
-                  <td>
-                    <span>Spicy seasoned seafood noodles</span>
-                  </td>
-                  <td>
-                    <span>Rp. 43.000</span>
-                  </td>
-                  <td>
-                    <p className="status-table completed">Completed</p>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <img
-                      src="/images/avatar/avatar-1.png"
-                      className="avatar"
-                      alt=""
-                    />{" "}
-                    <span>Sofian Hadi</span>
-                  </td>
-                  <td>
-                    <span>Spicy seasoned seafood noodles</span>
-                  </td>
-                  <td>
-                    <span>Rp. 43.000</span>
-                  </td>
-                  <td>
-                    <p className="status-table completed">Completed</p>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <img
-                      src="/images/avatar/avatar-1.png"
-                      className="avatar"
-                      alt=""
-                    />{" "}
-                    <span>Sofian Hadi</span>
-                  </td>
-                  <td>
-                    <span>Spicy seasoned seafood noodles</span>
-                  </td>
-                  <td>
-                    <span>Rp. 43.000</span>
-                  </td>
-                  <td>
-                    <p className="status-table pending">Pending</p>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <img
-                      src="/images/avatar/avatar-1.png"
-                      className="avatar"
-                      alt=""
-                    />{" "}
-                    <span>Sofian Hadi</span>
-                  </td>
-                  <td>
-                    <span>Spicy seasoned seafood noodles</span>
-                  </td>
-                  <td>
-                    <span>Rp. 43.000</span>
-                  </td>
-                  <td>
-                    <p className="status-table completed">Completed</p>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <img
-                      src="/images/avatar/avatar-1.png"
-                      className="avatar"
-                      alt=""
-                    />{" "}
-                    <span>Sofian Hadi</span>
-                  </td>
-                  <td>
-                    <span>Spicy seasoned seafood noodles</span>
-                  </td>
-                  <td>
-                    <span>Rp. 43.000</span>
-                  </td>
-                  <td>
-                    <p className="status-table pending">Pending</p>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <img
-                      src="/images/avatar/avatar-1.png"
-                      className="avatar"
-                      alt=""
-                    />{" "}
-                    <span>Sofian Hadi</span>
-                  </td>
-                  <td>
-                    <span>Spicy seasoned seafood noodles</span>
-                  </td>
-                  <td>
-                    <span>Rp. 43.000</span>
-                  </td>
-                  <td>
-                    <p className="status-table completed">Completed</p>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <img
-                      src="/images/avatar/avatar-1.png"
-                      className="avatar"
-                      alt=""
-                    />{" "}
-                    <span>Sofian Hadi</span>
-                  </td>
-                  <td>
-                    <span>Spicy seasoned seafood noodles</span>
-                  </td>
-                  <td>
-                    <span>Rp. 43.000</span>
-                  </td>
-                  <td>
-                    <p className="status-table pending">Pending</p>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <img
-                      src="/images/avatar/avatar-1.png"
-                      className="avatar"
-                      alt=""
-                    />{" "}
-                    <span>Sofian Hadi</span>
-                  </td>
-                  <td>
-                    <span>Spicy seasoned seafood noodles</span>
-                  </td>
-                  <td>
-                    <span>Rp. 43.000</span>
-                  </td>
-                  <td>
-                    <p className="status-table completed">Completed</p>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <img
-                      src="/images/avatar/avatar-1.png"
-                      className="avatar"
-                      alt=""
-                    />{" "}
-                    <span>Sofian Hadi</span>
-                  </td>
-                  <td>
-                    <span>Spicy seasoned seafood noodles</span>
-                  </td>
-                  <td>
-                    <span>Rp. 43.000</span>
-                  </td>
-                  <td>
-                    <p className="status-table completed">Completed</p>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <img
-                      src="/images/avatar/avatar-1.png"
-                      className="avatar"
-                      alt=""
-                    />{" "}
-                    <span>Sofian Hadi</span>
-                  </td>
-                  <td>
-                    <span>Spicy seasoned seafood noodles</span>
-                  </td>
-                  <td>
-                    <span>Rp. 43.000</span>
-                  </td>
-                  <td>
-                    <p className="status-table pending">Pending</p>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <img
-                      src="/images/avatar/avatar-1.png"
-                      className="avatar"
-                      alt=""
-                    />{" "}
-                    <span>Sofian Hadi</span>
-                  </td>
-                  <td>
-                    <span>Spicy seasoned seafood noodles</span>
-                  </td>
-                  <td>
-                    <span>Rp. 43.000</span>
-                  </td>
-                  <td>
-                    <p className="status-table pending">Pending</p>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <img
-                      src="/images/avatar/avatar-1.png"
-                      className="avatar"
-                      alt=""
-                    />{" "}
-                    <span>Sofian Hadi</span>
-                  </td>
-                  <td>
-                    <span>Spicy seasoned seafood noodles</span>
-                  </td>
-                  <td>
-                    <span>Rp. 43.000</span>
-                  </td>
-                  <td>
-                    <p className="status-table pending">Pending</p>
-                  </td>
-                </tr>
+                {customer.map((data, index) => (
+                  <tr key={index}>
+                    <td>
+                      <img
+                        src={`/images/avatar/${data.image}`}
+                        className={`avatar avatar-${data.bg_color}`}
+                        alt={`${data.image}`}
+                      />{" "}
+                      <span>{data.name}</span>
+                    </td>
+                    <td>
+                      <span>{data.menu}</span>
+                    </td>
+                    <td>
+                      <span>{data.total_payment}</span>
+                    </td>
+                    <td>
+                      <p className={`status-table ${data.status}`}>
+                        {data.status}
+                      </p>
+                    </td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>

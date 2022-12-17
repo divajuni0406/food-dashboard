@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import "../css/OrderSuccessNotif.css";
-import { paymentConfirm } from "../redux/actions/userActivities";
+import "../../css/OrderSuccessNotif.css";
+import { paymentConfirm } from "../../redux/actions/userActivities";
 import { useDispatch, useSelector } from "react-redux";
 
 const OrderSuccess = () => {

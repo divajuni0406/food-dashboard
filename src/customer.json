@@ -1,0 +1,82 @@
+[
+  {
+    "image": "avatar-1.png",
+    "name": "Sofian Hadi",
+    "menu": "Spicy seasoned seafood noodles",
+    "total_payment": "Rp. 43.000",
+    "status": "Completed",
+    "bg_color": "purple"
+  },
+  {
+    "image": "avatar-2.png",
+    "name": "Kadek",
+    "menu": "Salted Pasta with mushroom sauce",
+    "total_payment": "Rp. 35.000",
+    "status": "Preparing",
+    "bg_color": "blue"
+  },
+  {
+    "image": "avatar-3.png",
+    "name": "Habil",
+    "menu": "Beef dumpling in hot and sour soup",
+    "total_payment": "Rp. 65.000",
+    "status": "Pending",
+    "bg_color": "pink"
+  },
+  {
+    "image": "avatar-4.png",
+    "name": "Diah",
+    "menu": "Hot spicy fried rice with omelet",
+    "total_payment": "Rp. 57.000",
+    "status": "Completed",
+    "bg_color": "chocolate"
+  },
+  {
+    "image": "avatar-5.png",
+    "name": "Made",
+    "menu": "Hot spicy fried rice with omelet",
+    "total_payment": "Rp. 57.000",
+    "status": "Completed",
+    "bg_color": "cyan"
+  },
+  {
+    "image": "avatar-1.png",
+    "name": "Sofian Hadi",
+    "menu": "Spicy seasoned seafood noodles",
+    "total_payment": "Rp. 43.000",
+    "status": "Completed",
+    "bg_color": "purple"
+  },
+  {
+    "image": "avatar-2.png",
+    "name": "Kadek",
+    "menu": "Salted Pasta with mushroom sauce",
+    "total_payment": "Rp. 35.000",
+    "status": "Preparing",
+    "bg_color": "blue"
+  },
+  {
+    "image": "avatar-3.png",
+    "name": "Habil",
+    "menu": "Beef dumpling in hot and sour soup",
+    "total_payment": "Rp. 65.000",
+    "status": "Pending",
+    "bg_color": "pink"
+  },
+  {
+    "image": "avatar-4.png",
+    "name": "Diah",
+    "menu": "Hot spicy fried rice with omelet",
+    "total_payment": "Rp. 57.000",
+    "status": "Completed",
+    "bg_color": "chocolate"
+  },
+  {
+    "image": "avatar-5.png",
+    "name": "Made",
+    "menu": "Hot spicy fried rice with omelet",
+    "total_payment": "Rp. 57.000",
+    "status": "Completed",
+    "bg_color": "cyan"
+  }
+]

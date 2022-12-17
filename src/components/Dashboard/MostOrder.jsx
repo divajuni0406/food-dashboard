@@ -4,7 +4,7 @@ import { RiArrowDropUpLine, RiArrowDropDownLine } from "react-icons/ri";
 import foods from "../../foods.json";
 import MostType from "./MostType";
 
-const MostOrder = (props) => {
+const MostOrder = () => {
   const [whereToEatDrop, setWhereToEatDrop] = useState("Today");
   const [toggleDropdown, setToggleDropdown] = useState(false);
   const [isShowAll, setIsShowAll] = useState(false);
@@ -25,7 +25,6 @@ const MostOrder = (props) => {
   const handleShowAll = (e) => {
     e.preventDefault();
     setIsShowAll(!isShowAll);
-    props.show(!isShowAll);
     {
       isShowAll ? setTextHide("hide") : setTextHide("all");
     }

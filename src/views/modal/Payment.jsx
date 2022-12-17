@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "../css/Payment.css";
+import "../../css/Payment.css";
 import { useSelector, useDispatch } from "react-redux";
-import { payment } from "../redux/actions/userActivities";
+import { payment } from "../../redux/actions/userActivities";
 import { IoIosArrowRoundBack, IoMdAdd } from "react-icons/io";
 import { AiOutlineDelete } from "react-icons/ai";
 import { RiArrowDropDownLine, RiArrowDropUpLine } from "react-icons/ri";
@@ -11,8 +11,8 @@ import {
   BsCashCoin,
 } from "react-icons/bs";
 import { RiPaypalLine } from "react-icons/ri";
-import OrderSuccess from "./OrderSuccessNotif";
-import { paymentConfirm } from "../redux/actions/userActivities";
+import OrderSuccess from "../notification/OrderSuccessNotif";
+import { paymentConfirm } from "../../redux/actions/userActivities";
 
 const Payment = () => {
   const [paymentMethod, setPaymentMethod] = useState("credit card");

@@ -1,0 +1,52 @@
+.top-content-setting {
+  background: #1f1d2b;
+  position: fixed;
+  top: 70px;
+  left: 120px;
+  width: 90%;
+  z-index: 1;
+  border-radius: 10px;
+  padding: 35px 35px 0 35px;
+}
+
+.content-setting {
+  padding: 150px 20px 0 20px;
+}
+
+.top-title-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.top-title-wrapper h1 {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 140%;
+  color: #ffffff;
+}
+
+.btn-setting {
+  border-radius: 10px;
+  border: #252836 solid 2px;
+  background: transparent;
+  width: 19%;
+  padding: 10px 5px;
+}
+
+.top-title-wrapper .setting-icon {
+  font-size: 20px;
+  color: white;
+  margin-right: 5px;
+}
+
+.top-title-wrapper .text-manage {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  color: #ffffff;
+}

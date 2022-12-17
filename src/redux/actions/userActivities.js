@@ -8,6 +8,7 @@ const userActivities = createSlice({
     isPaymentConfirm: false,
     isCreateSuccess: false,
     isModalOpen: false,
+    myDishType: "hot",
   },
   reducers: {
     login: (state, action) => {
@@ -25,9 +26,18 @@ const userActivities = createSlice({
     modalOpen: (state, action) => {
       state.isModalOpen = action.payload;
     },
+    DishType: (state, action) => {
+      state.myDishType = action.payload;
+    },
   },
 });
 
-export const { login, payment, paymentConfirm, createSuccess, modalOpen } =
-  userActivities.actions;
+export const {
+  login,
+  payment,
+  paymentConfirm,
+  createSuccess,
+  modalOpen,
+  DishType,
+} = userActivities.actions;
 export default userActivities.reducer;

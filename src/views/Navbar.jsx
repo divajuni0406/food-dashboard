@@ -1,15 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import { AiFillPieChart } from "react-icons/ai";
 import { FiSettings } from "react-icons/fi";
 import { HiOutlineLogout, HiOutlineHome } from "react-icons/hi";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { login } from "../redux/actions/userActivities";
 import "../css/Navbar.css";
 
 const Navbar = () => {
-  const [navbarValue, setNavbarValue] = useState("home");
   const dispatch = useDispatch();
+  const location = useLocation();
+  const pathName = location.pathname;
 
   const handleLogout = (e) => {
     e.preventDefault();
@@ -26,10 +27,9 @@ const Navbar = () => {
         </Link>
         <Link
           className={`icon-navbar-wrapper ${
-            navbarValue === "home" ? "icon-navbar-active" : ""
+            pathName === "/" ? "icon-navbar-active" : ""
           }`}
           to={"/"}
-          onClick={() => setNavbarValue("home")}
         >
           <div className="icon-navbar">
             <HiOutlineHome />
@@ -37,10 +37,9 @@ const Navbar = () => {
         </Link>
         <Link
           className={`icon-navbar-wrapper ${
-            navbarValue === "dashboard" ? "icon-navbar-active" : ""
+            pathName === "/dashboard" ? "icon-navbar-active" : ""
           }`}
           to={"/dashboard"}
-          onClick={() => setNavbarValue("dashboard")}
         >
           <div className="icon-navbar">
             <AiFillPieChart />
@@ -48,10 +47,9 @@ const Navbar = () => {
         </Link>
         <Link
           className={`icon-navbar-wrapper ${
-            navbarValue === "setting" ? "icon-navbar-active" : ""
+            pathName === "/setting" ? "icon-navbar-active" : ""
           }`}
           to={"/setting"}
-          onClick={() => setNavbarValue("setting")}
         >
           <div className="icon-navbar">
             <FiSettings />
