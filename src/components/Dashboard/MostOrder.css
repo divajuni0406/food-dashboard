@@ -46,6 +46,7 @@
 .most-food-general {
   padding: 10px 20px 10px 10px;
   overflow-y: scroll;
+  background-color: #1f1d2b;
   transition: all 0.5s;
 }
 
@@ -54,7 +55,7 @@
 }
 
 .all {
-  height: 72vh;
+  height: calc(100vh - 282px);
 }
 
 .most-food-wrapper {
@@ -108,9 +109,8 @@
   line-height: 140%;
   order: 0;
   flex-grow: 0;
-  width: 20%;
   height: 50px;
-  width: 372px;
+  width: 38vh;
 
   padding: 12px;
   border-radius: 8px;

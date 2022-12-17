@@ -10,6 +10,7 @@
   z-index: 0;
   transition: all 0.5s;
   animation: fadeIn 1s;
+  height: 36vh;
 }
 
 .type-order-hidden {
@@ -38,10 +39,98 @@
   background: #393c49;
   position: relative;
   bottom: -30px;
-  margin-bottom: 40px;
+  margin-bottom: 4vh;
 }
 
 .chart-area {
   display: flex;
   justify-content: space-between;
+}
+
+#chart {
+  position: relative;
+  left: -40px;
+}
+
+.ellipse-icon {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 20vh;
+  top: 11vh;
+  font-size: 18px;
+}
+
+.ellipse-dineIn {
+  color: #ffcf00;
+  margin-top: 1vh;
+  margin-bottom: 0.7vh;
+}
+.ellipse-toGo {
+  margin: 2.5vh 5px 4vh 0;
+  color: #ffa900;
+}
+.ellipse-delivery {
+  color: #df8109;
+}
+
+.text-chart-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 10px 0 0;
+  width: 40%;
+}
+
+.text-chart {
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+
+.text-chart h1 {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 130%;
+  align-items: center;
+  color: #ffffff;
+  order: 0;
+  flex-grow: 0;
+  margin-bottom: 0;
+}
+
+.text-chart span {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  align-items: center;
+  color: #abbbc2;
+  order: 1;
+  flex-grow: 0;
+}
+
+@media (max-width: 1530px) {
+  .ellipse-icon {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 20vh;
+    top: 13.5vh;
+    font-size: 18px;
+  }
+
+  .text-chart {
+    margin-bottom: 5px;
+  }
+
+  .text-chart h1 {
+    font-size: 15px;
+    margin-bottom: 0px;
+  }
+
+  .text-chart span {
+    font-size: 12px;
+  }
 }

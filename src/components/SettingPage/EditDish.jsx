@@ -14,9 +14,6 @@ const EditDish = () => {
   const { myDishType } = useSelector((store) => store.userActivities);
   const boxMenu = useRef(null);
 
-  let menu = document.querySelector("#menu-wrapper");
-  console.log(menu);
-
   useEffect(() => {
     boxMenu.current.classList.add("d-none");
     setTimeout(() => {

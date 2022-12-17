@@ -278,7 +278,7 @@
 }
 
 .label-payment {
-  margin-top: 25px;
+  margin-top: 20px;
 }
 
 .input-payment-cvv::placeholder {
@@ -360,6 +360,7 @@
   opacity: 0;
   visibility: hidden;
   transition: all 0.5s;
+  padding: 10px;
 }
 
 .dropdown-area-active {
@@ -384,4 +385,102 @@
   margin-bottom: 15px;
   width: 100%;
   top: 0;
+}
+
+@media (max-width: 1530px) {
+  .confirmation-area {
+    padding: 10px 20px 20px 20px;
+  }
+
+  .text-confirm h1 {
+    font-size: 26px;
+  }
+
+  .text-confirm h2 {
+    font-size: 18px;
+  }
+
+  .divider-top-payment {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .text-payment {
+    margin-top: 35px;
+    margin-bottom: 30px;
+  }
+
+  .text-payment h1 {
+    font-size: 27px;
+  }
+
+  .text-payment h2 {
+    font-size: 15px;
+  }
+
+  .credit-card-area h1 {
+    font-size: 18px;
+  }
+
+  .payment-method {
+    margin-top: 10px;
+  }
+
+  .credit-card-wrapper {
+    width: 27%;
+  }
+
+  .text-payment-method {
+    font-size: 12px;
+  }
+
+  .label-payment {
+    font-size: 13px;
+  }
+
+  .input-payment {
+    margin-bottom: 1px;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .input-payment-cvv {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .label-payment {
+    margin-top: 15px;
+  }
+
+  .input-payment-cvv::placeholder {
+    font-size: 50px;
+  }
+
+  .btn-payment-confirm {
+    margin-top: 40px;
+  }
+
+  .btn-dropdown-food h4 {
+    font-size: 14px;
+  }
+
+  .btn-dropdown-food span {
+    font-size: 25px;
+  }
+
+  .dropdown-area {
+    padding: 10px;
+  }
+
+  .dropdown-area-active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .dropdown-area option {
+    font-size: 14px;
+  }
 }

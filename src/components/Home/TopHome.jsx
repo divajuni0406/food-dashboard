@@ -3,24 +3,22 @@ import "./TopHome.css";
 import { Link } from "react-router-dom";
 import { BiSearch } from "react-icons/bi";
 import FoodsHome from "./FoodsHome";
+import _ from "lodash";
+import moment from "moment/moment";
 
 const TopHome = () => {
   const [dishType, setDishType] = useState("hot");
+  let currentDate = moment().format("dddd, D MMM, YYYY");
 
   useEffect(() => {
-    let hot = document.querySelector("#hot");
-    let cold = document.querySelector("#cold");
-
-    if (dishType === "hot") {
-      hot.classList.add("nav-food-active");
-      cold.classList.remove("nav-food-active");
-    } else if (dishType === "cold") {
-      hot.classList.remove("nav-food-active");
-      cold.classList.add("nav-food-active");
-    } else {
-      hot.classList.remove("nav-food-active");
-      cold.classList.remove("nav-food-active");
-    }
+    let navLink = document.querySelectorAll(".nav-food");
+    _.each(navLink, (element) => {
+      if (dishType === element.id) {
+        element.classList.add("nav-food-active");
+      } else {
+        element.classList.remove("nav-food-active");
+      }
+    });
   }, [dishType]);
 
   return (
@@ -29,7 +27,7 @@ const TopHome = () => {
         <div className="top-wrapper">
           <div className="top-text-wrapper">
             <h1>Made Resto</h1>
-            <span>Tuesday, 2 Feb 2021</span>
+            <span>{currentDate}</span>
           </div>
           <div className="search-area">
             <form action="">
@@ -59,16 +57,32 @@ const TopHome = () => {
           >
             Cold Dishes
           </Link>
-          <Link className="nav-food" onClick={() => setDishType("shop")}>
+          <Link
+            className="nav-food"
+            onClick={() => setDishType("shop")}
+            id="shop"
+          >
             Shop
           </Link>
-          <Link className="nav-food" onClick={() => setDishType("grill")}>
+          <Link
+            className="nav-food"
+            onClick={() => setDishType("grill")}
+            id="grill"
+          >
             Grill
           </Link>
-          <Link className="nav-food" onClick={() => setDishType("appetizer")}>
+          <Link
+            className="nav-food"
+            onClick={() => setDishType("appetizer")}
+            id="appetizer"
+          >
             Appetizer
           </Link>
-          <Link className="nav-food" onClick={() => setDishType("dessert")}>
+          <Link
+            className="nav-food"
+            onClick={() => setDishType("dessert")}
+            id="dessert"
+          >
             Dessert
           </Link>
         </div>

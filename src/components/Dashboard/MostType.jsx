@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./MostType.css";
 import { RiArrowDropUpLine, RiArrowDropDownLine } from "react-icons/ri";
+import { IoEllipse } from "react-icons/io5";
 import ApexCharts from "apexcharts";
 
 const MostType = ({ isShowAll }) => {
@@ -13,7 +14,6 @@ const MostType = ({ isShowAll }) => {
     while (chart.firstChild) chart.removeChild(chart.firstChild);
     let orderList = {
       chart: {
-        height: 280,
         width: "100%",
         type: "radialBar",
       },
@@ -23,7 +23,7 @@ const MostType = ({ isShowAll }) => {
         radialBar: {
           hollow: {
             margin: 0,
-            size: "55%",
+            size: "40%",
             background: "#1f1d2b",
           },
           track: {
@@ -85,7 +85,31 @@ const MostType = ({ isShowAll }) => {
       <div className="divider-most-type"></div>
       <div className="chart-area">
         <div id="chart"></div>
-        <div>sdsdsd sdsd</div>
+        <div className="text-chart-wrapper">
+          <div className="ellipse-icon">
+            <span className="ellipse-dineIn">
+              <IoEllipse />
+            </span>
+            <span className="ellipse-toGo">
+              <IoEllipse />
+            </span>
+            <span className="ellipse-delivery">
+              <IoEllipse />
+            </span>
+          </div>
+          <div className="text-chart">
+            <h1>Dine In</h1>
+            <span>200 customers</span>
+          </div>
+          <div className="text-chart">
+            <h1>To Go</h1>
+            <span>122 customers</span>
+          </div>
+          <div className="text-chart">
+            <h1>Delivery</h1>
+            <span>264 custemers</span>
+          </div>
+        </div>
       </div>
     </div>
   );

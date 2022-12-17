@@ -13,8 +13,6 @@ const CreateSuccessNotif = () => {
     }, 2000);
   }, [isCreateSuccess]);
 
-  console.log(isCreateSuccess);
-
   return (
     <div
       className={`bg-createNotif ${

@@ -11,7 +11,6 @@ const FoodsHome = ({ dishType }) => {
   const [whereToEatDrop, setWhereToEatDrop] = useState("Dine In");
   const [toggleDropdown, setToggleDropdown] = useState(false);
   const boxMenu = useRef(null);
-  // console.log(ref.current);
 
   const addNewOrder = (index) => {
     dispatch(addOrder(foods[index]));
@@ -25,9 +24,6 @@ const FoodsHome = ({ dishType }) => {
         .replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.")
     );
   };
-
-  let menu = document.querySelector("#menu-wrapper");
-  console.log(menu);
 
   useEffect(() => {
     boxMenu.current.classList.add("d-none");

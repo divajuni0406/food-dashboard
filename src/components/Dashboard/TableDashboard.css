@@ -23,10 +23,11 @@
   border-radius: 10px;
   border: 1px solid #393c49;
   background: transparent;
-  width: 12%;
+  width: 10vw;
   padding: 10px;
   display: flex;
-  align-items: center;
+  text-align: center;
+  justify-content: center;
 }
 
 .order-title-wrapper .filter-icon {

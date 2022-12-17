@@ -7,13 +7,16 @@ import {
 import { BsPeople } from "react-icons/bs";
 import { BiBookmarkMinus } from "react-icons/bi";
 import "./TopDashboard.css";
+import moment from "moment/moment";
 
 const TopDashboard = () => {
+  let currentDate = moment().format("dddd, D MMM, YYYY");
+
   return (
     <>
       <div className="header-dashboard">
         <h1>Dashboard</h1>
-        <span>Tuesday, 2 Feb, 2021</span>
+        <span>{currentDate}</span>
       </div>
       <div className="row">
         <div className="col-md-4">

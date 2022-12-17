@@ -126,6 +126,9 @@ input::-webkit-inner-spin-button {
   line-height: 130%;
   color: #ffffff;
   margin-bottom: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .pay-product-text span {
@@ -314,6 +317,7 @@ input::-webkit-inner-spin-button {
   font-size: 14px;
   color: #ffffff;
   padding: 12px 0 12px 0;
+  border: none;
   box-shadow: 0px 8px 24px rgba(255, 202, 64, 0.3);
 }
 

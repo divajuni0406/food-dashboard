@@ -13,8 +13,6 @@ const OrderSuccess = () => {
     }, 2000);
   }, [isPaymentConfirm]);
 
-  console.log(paymentConfirm);
-
   return (
     <div
       className={`bg-orderNotif ${isPaymentConfirm ? "orderNotif-active" : ""}`}

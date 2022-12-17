@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { GoSettings } from "react-icons/go";
 import { useDispatch } from "react-redux";
 import { DishType } from "../../redux/actions/userActivities";
+import _ from "lodash";
 
 const TopSetting = () => {
   const [dishType, setDishType] = useState("hot");
@@ -11,20 +12,16 @@ const TopSetting = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    let hot = document.querySelector("#hot");
-    let cold = document.querySelector("#cold");
     dispatch(DishType(dishType));
 
-    if (dishType === "hot") {
-      hot.classList.add("nav-food-active");
-      cold.classList.remove("nav-food-active");
-    } else if (dishType === "cold") {
-      hot.classList.remove("nav-food-active");
-      cold.classList.add("nav-food-active");
-    } else {
-      hot.classList.remove("nav-food-active");
-      cold.classList.remove("nav-food-active");
-    }
+    let navLink = document.querySelectorAll(".nav-food");
+    _.each(navLink, (element) => {
+      if (dishType === element.id) {
+        element.classList.add("nav-food-active");
+      } else {
+        element.classList.remove("nav-food-active");
+      }
+    });
   }, [dishType]);
 
   return (
@@ -49,16 +46,32 @@ const TopSetting = () => {
         >
           Cold Dishes
         </Link>
-        <Link className="nav-food" onClick={() => setDishType("shop")}>
+        <Link
+          className="nav-food"
+          onClick={() => setDishType("shop")}
+          id="shop"
+        >
           Shop
         </Link>
-        <Link className="nav-food" onClick={() => setDishType("grill")}>
+        <Link
+          className="nav-food"
+          onClick={() => setDishType("grill")}
+          id="grill"
+        >
           Grill
         </Link>
-        <Link className="nav-food" onClick={() => setDishType("appetizer")}>
+        <Link
+          className="nav-food"
+          onClick={() => setDishType("appetizer")}
+          id="appetizer"
+        >
           Appetizer
         </Link>
-        <Link className="nav-food" onClick={() => setDishType("dessert")}>
+        <Link
+          className="nav-food"
+          onClick={() => setDishType("dessert")}
+          id="dessert"
+        >
           Dessert
         </Link>
       </div>
