@@ -113,6 +113,16 @@ input::-webkit-inner-spin-button {
   padding: 110px 10px 200px 10px;
 }
 
+.pay-products-wrapper h1 {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 130%;
+  color: #ffffff;
+  text-align: center;
+}
+
 .pay-img-wrapper img {
   max-width: 90%;
   border-radius: 50%;

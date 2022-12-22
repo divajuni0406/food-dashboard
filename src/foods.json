@@ -1,45 +1,45 @@
 [
   {
-    "image": "cold_1.jpg",
-    "food_name": "Ice Cream Vanilla with sugar balmon",
+    "image": "hot_1.jpg",
+    "food_name": "Spicy seasoned seafood noodles",
     "price": "43000",
     "stock": 20,
-    "type": "cold"
+    "type": "hot"
   },
   {
-    "image": "cold_2.jpg",
-    "food_name": "Vanilla Cream with colorful ice",
+    "image": "hot_2.png",
+    "food_name": "Salted Pasta with mushroom sauce",
     "price": "35000",
     "stock": 11,
-    "type": "cold"
+    "type": "hot"
   },
   {
-    "image": "cold_3.jpg",
-    "food_name": "Ice Dream Coffee",
+    "image": "hot_3.png",
+    "food_name": "Beef dumpling in hot and sour soup",
     "price": "65000",
     "stock": 16,
-    "type": "cold"
+    "type": "hot"
   },
   {
-    "image": "cold_4.jpg",
-    "food_name": "Ice Cream Vanilla with sugar balmon",
+    "image": "hot_4.png",
+    "food_name": "Healthy noodle with spinach leaf",
     "price": "65000",
     "stock": 22,
-    "type": "cold"
+    "type": "hot"
   },
   {
-    "image": "cold_5.jpg",
-    "food_name": "Angsle",
+    "image": "hot_5.png",
+    "food_name": "Hot spicy fried rice with omelet",
     "price": "57000",
     "stock": 13,
-    "type": "cold"
+    "type": "hot"
   },
   {
-    "image": "cold_6.jpg",
-    "food_name": "Daluman",
+    "image": "hot_6.jpg",
+    "food_name": "Spicy instant noodle with special omelette",
     "price": "45000",
     "stock": 17,
-    "type": "cold"
+    "type": "hot"
   },
   {
     "image": "hot_1.jpg",
@@ -126,45 +126,45 @@
     "type": "cold"
   },
   {
-    "image": "hot_1.jpg",
-    "food_name": "Spicy seasoned seafood noodles",
+    "image": "cold_1.jpg",
+    "food_name": "Ice Cream Vanilla with sugar balmon",
     "price": "43000",
     "stock": 20,
-    "type": "hot"
+    "type": "cold"
   },
   {
-    "image": "hot_2.png",
-    "food_name": "Salted Pasta with mushroom sauce",
+    "image": "cold_2.jpg",
+    "food_name": "Vanilla Cream with colorful ice",
     "price": "35000",
     "stock": 11,
-    "type": "hot"
+    "type": "cold"
   },
   {
-    "image": "hot_3.png",
-    "food_name": "Beef dumpling in hot and sour soup",
+    "image": "cold_3.jpg",
+    "food_name": "Ice Dream Coffee",
     "price": "65000",
     "stock": 16,
-    "type": "hot"
+    "type": "cold"
   },
   {
-    "image": "hot_4.png",
-    "food_name": "Healthy noodle with spinach leaf",
+    "image": "cold_4.jpg",
+    "food_name": "Ice Cream Vanilla with sugar balmon",
     "price": "65000",
     "stock": 22,
-    "type": "hot"
+    "type": "cold"
   },
   {
-    "image": "hot_5.png",
-    "food_name": "Hot spicy fried rice with omelet",
+    "image": "cold_5.jpg",
+    "food_name": "Angsle",
     "price": "57000",
     "stock": 13,
-    "type": "hot"
+    "type": "cold"
   },
   {
-    "image": "hot_6.jpg",
-    "food_name": "Spicy instant noodle with special omelette",
+    "image": "cold_6.jpg",
+    "food_name": "Daluman",
     "price": "45000",
     "stock": 17,
-    "type": "hot"
+    "type": "cold"
   }
 ]

@@ -9,7 +9,7 @@ const userActivities = createSlice({
     isCreateSuccess: false,
     isModalOpen: false,
     myDishType: "hot",
-    order: {},
+    ordersValue: [],
   },
   reducers: {
     login: (state, action) => {
@@ -30,6 +30,29 @@ const userActivities = createSlice({
     DishType: (state, action) => {
       state.myDishType = action.payload;
     },
+    addFood: (state, action) => {
+      state.ordersValue.push(action.payload);
+    },
+    myOrder: (state, action) => {
+      state.ordersValue = action.payload;
+    },
+    deleteMyOrder: (state, action) => {
+      state.ordersValue.splice(action.payload, 1);
+    },
+    incrementQty: (state, action) => {
+      state.ordersValue[action.payload].qty++;
+      let total =
+        parseInt(state.ordersValue[action.payload].price) *
+        state.ordersValue[action.payload].qty;
+      state.ordersValue[action.payload].totalPrice = total;
+    },
+    decrementQty: (state, action) => {
+      state.ordersValue[action.payload].qty--;
+      let total =
+        parseInt(state.ordersValue[action.payload].price) *
+        state.ordersValue[action.payload].qty;
+      state.ordersValue[action.payload].totalPrice = total;
+    },
   },
 });
 
@@ -40,5 +63,10 @@ export const {
   createSuccess,
   modalOpen,
   DishType,
+  addFood,
+  myOrder,
+  deleteMyOrder,
+  incrementQty,
+  decrementQty,
 } = userActivities.actions;
 export default userActivities.reducer;
