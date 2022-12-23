@@ -31,7 +31,17 @@ const userActivities = createSlice({
       state.myDishType = action.payload;
     },
     addFood: (state, action) => {
-      state.ordersValue.push(action.payload);
+      const itemIndex = state.ordersValue.findIndex(
+        (item) => item.name === action.payload.name
+      );
+      if (itemIndex >= 0) {
+        state.ordersValue[itemIndex].qty += 1;
+        let total =
+          state.ordersValue[itemIndex].price * state.ordersValue[itemIndex].qty;
+        state.ordersValue[itemIndex].totalPrice = total;
+      } else {
+        state.ordersValue.push(action.payload);
+      }
     },
     myOrder: (state, action) => {
       state.ordersValue = action.payload;
@@ -42,14 +52,14 @@ const userActivities = createSlice({
     incrementQty: (state, action) => {
       state.ordersValue[action.payload].qty++;
       let total =
-        parseInt(state.ordersValue[action.payload].price) *
+        state.ordersValue[action.payload].price *
         state.ordersValue[action.payload].qty;
       state.ordersValue[action.payload].totalPrice = total;
     },
     decrementQty: (state, action) => {
       state.ordersValue[action.payload].qty--;
       let total =
-        parseInt(state.ordersValue[action.payload].price) *
+        state.ordersValue[action.payload].price *
         state.ordersValue[action.payload].qty;
       state.ordersValue[action.payload].totalPrice = total;
     },
